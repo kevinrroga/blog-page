@@ -7,17 +7,17 @@ const PhilosophySection = () => {
 
   return (
     <section className="py-16 px-4 lg:px-6 bg-white">
-      <div className="max-w-7xl mx-auto"> {/* Increased from max-w-5xl */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start"> {/* Increased gap from 8 to 16 */}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left Column */}
-          <div className="space-y-6 -ml-8"> {/* Increased negative margin from -4 to -8 */}
+          <div className="space-y-6 -ml-8 lg:-ml-8"> {/* Added lg: prefix to keep on large screens only */}
             {/* Quote Mark */}
             <div className="text-orange-500 text-8xl font-bold leading-none pl-8">
               "
             </div>
             
             {/* Title and Quote */}
-            <div className="space-y-4 pl-8"> {/* Increased padding from 4 to 8 */}
+            <div className="space-y-4 pl-8 lg:pl-8"> {/* Added lg: prefix to keep on large screens only */}
               <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-4">
                 {t.missionTitle}
               </h2>
@@ -33,7 +33,7 @@ const PhilosophySection = () => {
           </div>
 
           {/* Right Column */}
-          <div className="space-y-6 pl-8"> {/* Added pl-8 for right spacing */}
+          <div className="space-y-6 lg:pl-8"> {/* Added lg: prefix to apply padding only on large screens */}
             {/* Description */}
             <p className="text-sm lg:text-base text-slate-600 text-justify max-w-prose">
               {t.missionDescription}

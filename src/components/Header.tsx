@@ -81,6 +81,7 @@ const Header = () => {
                 type="button"
                 onClick={() => toggleDesktopDropdown('about')}
                 className="px-3 py-2 rounded hover:bg-slate-800"
+                aria-label="About Us dropdown"
               >
                 {t.aboutUs}
               </button>
@@ -108,6 +109,7 @@ const Header = () => {
                 type="button"
                 onClick={() => toggleDesktopDropdown('projects')}
                 className="px-3 py-2 rounded hover:bg-slate-800"
+                aria-label="Projects dropdown"
               >
                 {t.projects}
               </button>
@@ -176,6 +178,7 @@ const Header = () => {
             onClick={() => setMobileMenuOpen(v => !v)}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
+            aria-label="Toggle mobile menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -203,6 +206,7 @@ const Header = () => {
                 onClick={() => toggleMobileSection('about')}
                 aria-expanded={mobileOpenSection === 'about'}
                 aria-controls="about-submenu"
+                aria-label="About Us submenu"
               >
                 {t.aboutUs}
                 <ChevronDown className={`w-3.5 h-3.5 ml-1 transition-transform duration-200 ${mobileOpenSection === 'about' ? 'rotate-180' : ''}`} />
@@ -241,6 +245,7 @@ const Header = () => {
                 onClick={() => toggleMobileSection('projects')}
                 aria-expanded={mobileOpenSection === 'projects'}
                 aria-controls="projects-submenu"
+                aria-label="Projects submenu"
               >
                 {t.projects}
                 <ChevronDown className={`w-3.5 h-3.5 ml-1 transition-transform duration-200 ${mobileOpenSection === 'projects' ? 'rotate-180' : ''}`} />
@@ -282,6 +287,8 @@ const Header = () => {
                 type="button"
                 onClick={() => setLanguage('en')}
                 className={`px-3 py-2 rounded ${language === 'en' ? 'bg-orange-500' : 'hover:bg-slate-700'}`}
+                aria-pressed={language === 'en'}
+                aria-label="Switch to English"
               >
                 EN
               </button>
@@ -289,6 +296,8 @@ const Header = () => {
                 type="button"
                 onClick={() => setLanguage('al')}
                 className={`px-3 py-2 rounded ${language === 'al' ? 'bg-orange-500' : 'hover:bg-slate-700'}`}
+                aria-pressed={language === 'al'}
+                aria-label="Switch to Albanian"
               >
                 AL
               </button>
