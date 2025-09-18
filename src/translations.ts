@@ -33,6 +33,7 @@ export const translations = {
     city: '1001 Tirana',
     phone: '+355 69 964 8754',
     email: 'president@al.elsa.org',
+    university: 'University of Tirana, Faculty of Law',
 
     // Gallery Stats
     legalConference: 'Legal conference',
@@ -222,5 +223,6 @@ export const translations = {
     alumniCurrentRole: 'Roli Aktual',
     alumniFormerPosition: 'Pozicioni i Mëparshëm në ELSA',
     ourPartners: 'Partnerët Tanë',
+    university: 'Universiteti i Tiranës, Fakulteti i Drejtësisë'
   }
 } as const;

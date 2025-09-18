@@ -47,77 +47,72 @@ const GalleryStats = () => {
     {
       logo: '../assets/frostfire.jpeg', // Move to public/images if not already there
       name: 'Frost & Fire',
-      description: 'Supporting legal excellence',
     },
     {
       logo: '../assets/lrg.jpg', // Move to public/images if not already there
       name: 'Partner Organization 2',
-      description: 'Advancing legal education',
     },
     {
       logo: '../assets/fdut.jpeg',
       name: 'Fakulteti i Drejtësisë',
-      description: 'International cooperation',
     },
     {
       logo: '../assets/halimi.jpeg',
       name: 'Halimi Law & Tax',
-      description: 'Professional development',
     },
     {
       logo: '../assets/europiani.jpg',
       name: 'Universiteti Europian i Tiranes',
-      description: 'Professional development',
     },
     {
       logo: '../assets/epoka university.jpg',
       name: 'Epoka University',
-      description: 'Professional development',
+
     },
     {
       logo: '../assets/komitetihelsinkit.jpeg',
       name: 'Komiteti Shqiptar i Helsinkit',
-      description: 'Professional development',
+
     },
     {
       logo: '../assets/ndi.jpeg',
       name: 'NDI',
-      description: 'Professional development',
+
     },
     {
       logo: '../assets/ministriadrejtesise.jpg',
       name: 'Ministria e Drejtësisë',
-      description: 'Professional development',
+
     },
     {
       logo: '../assets/osce.jpeg',
       name: 'OSCE',
-      description: 'Professional development',
+
     },
     {
       logo: '../assets/vcs.jpg',
       name: 'VCS',
-      description: 'Professional development',
+
     },
     {
       logo: '../assets/ryco.jpg',
       name: 'Regional Youth Cooperation Office',
-      description: 'Professional development',
+
     },
     {
       logo: '../assets/bba.jpeg',
       name: 'Beyond Barriers Association',
-      description: 'Professional development',
+
     },
     {
       logo: '../assets/qq.jpg',
       name: 'Qëndresa Qytetare',
-      description: 'Professional development',
+
     },
     {
       logo: '../assets/lawfirm.jpg',
       name: 'Partner Organization 4',
-      description: 'Professional development',
+
     },
   ];
 
@@ -164,7 +159,6 @@ const GalleryStats = () => {
                   {partner.name}
                 </h3>
                 <p className="text-sm text-slate-300 text-center">
-                  {partner.description}
                 </p>
               </motion.div>
             ))}

@@ -36,39 +36,39 @@ const Alumni = () => {
   const alumni = [
     {
       name: 'Dhimitër Zguro',
-      position: 'Former President 2018-2019',
-      photo: '/assets/alumni/john-doe.jpg',
-      currentRole: 'Associate - Halimi Law & Tax'
+      position: 'Associate - Halimi Law & Tax',
+      photo: '/assets/dhimiter.jpg',
+      currentRole: ''
     },
     {
       name: 'Sofjan Jaupaj',
-      position: 'Former VP Academic Activities 2019-2020',
-      photo: '/assets/alumni/jane-smith.jpg',
-      currentRole: 'Minister of Environment of the Republic of Albania'
+      position: 'Minister of Environment of the Republic of Albania',
+      photo: '/assets/sofjan.jpg',
+      currentRole: ''
     },
     {
       name: 'Glen Mebelli Bardhi',
-      position: 'Former Secretary General 2017-2018',
-      photo: '/assets/alumni/mark-johnson.jpg',
-      currentRole: 'Advisor to the Speaker of the Parliament and Chevening Scholar'
+      position: 'Advisor to the Speaker of the Parliament and Chevening Scholar',
+      photo: '/assets/glen.jpg',
+      currentRole: ''
     },
     {
       name: 'Gladiola Ago',
-      position: 'Former VP Marketing 2020-2021',
-      photo: '/assets/alumni/sarah-williams.jpg',
-      currentRole: 'Senior Associate - Boga & Associates'
+      position: 'Senior Associate - Boga & Associates',
+      photo: '/assets/gladiola.jpg',
+      currentRole: ''
     },
     {
       name: 'Bora Kola',
-      position: 'Former VP Seminars & Conferences 2016-2017',
-      photo: '/assets/alumni/david-brown.jpg',
-      currentRole: 'National Legal Expert - OSCE Presence in Albania'
+      position: 'National Legal Expert - OSCE Presence in Albania',
+      photo: '/assets/bora.png',
+      currentRole: ''
     },
     {
       name: 'Fiona Kamberi',
-      position: 'Former Treasurer 2019-2020',
-      photo: '/assets/alumni/emily-davis.jpg',
-      currentRole: 'Associate - Frost & Fire Consulting'
+      position: 'Associate - Frost & Fire Consulting',
+      photo: '/assets/fiona.png',
+      currentRole: ''
     }
   ];
 
