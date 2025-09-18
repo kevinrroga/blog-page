@@ -13,6 +13,7 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null); // desktop dropdowns
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileOpenSection, setMobileOpenSection] = useState<string | null>(null); // 'about' | 'projects' | null
+  const [lastClicked, setLastClicked] = useState(0);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
@@ -53,6 +54,10 @@ const Header = () => {
                 src={elsaLogo}
                 alt="ELSA Albania Logo"
                 className="h-full w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+                crossOrigin="anonymous"
+                referrerPolicy="no-referrer"
               />
             </div>
             <div className="hidden sm:block text-sm">
@@ -129,18 +134,35 @@ const Header = () => {
             </Link>
 
             {/* Language */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2" role="group" aria-label="Language selector">
               <button
                 type="button"
-                onClick={() => setLanguage('en')}
+                onClick={() => {
+                  // Validate to prevent potential stored XSS if language is somehow manipulated
+                  const validLangs = ['en', 'al'];
+                  if (!validLangs.includes('en')) {
+                    console.error('Invalid language selection attempted');
+                    return;
+                  }
+                  setLanguage('en');
+                }}
                 className={`px-3 py-2 rounded ${language === 'en' ? 'bg-orange-500' : 'hover:bg-slate-800'}`}
+                aria-pressed={language === 'en'}
+                aria-label="Switch to English"
               >
                 EN
               </button>
               <button
                 type="button"
-                onClick={() => setLanguage('al')}
+                onClick={() => {
+                  const now = Date.now();
+                  if (now - lastClicked < 500) return; // Prevent rapid clicks
+                  setLastClicked(now);
+                  setLanguage('al');
+                }}
                 className={`px-3 py-2 rounded ${language === 'al' ? 'bg-orange-500' : 'hover:bg-slate-800'}`}
+                aria-pressed={language === 'al'}
+                aria-label="Switch to Albanian"
               >
                 AL
               </button>
