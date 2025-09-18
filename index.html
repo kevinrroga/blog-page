@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self';
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https://flagcdn.com;
+      font-src 'self' data:;
+      connect-src 'self';
+      frame-ancestors 'self';
+      base-uri 'self';
+      form-action 'self';
+    ">
+    <meta name="referrer" content="no-referrer" />
     <title>Create ELSA-inspired website structure</title>
   </head>
   <body>
