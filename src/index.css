@@ -16,9 +16,8 @@
 
   .gallery-item {
     position: relative;
-    width: 200px;
     min-width: 0;
-    flex: 1;
+    flex: 1 1 0%;
     overflow: hidden;
     transition: all 300ms ease-out;
     cursor: pointer;
@@ -36,4 +35,9 @@
     transform: translateZ(0);
     backface-visibility: hidden;
   }
+}
+
+/* Add to your global CSS (e.g., index.css or App.css) */
+body {
+  overflow-x: hidden;
 }

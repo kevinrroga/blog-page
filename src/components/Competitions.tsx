@@ -30,12 +30,10 @@ const Competitions = () => {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Removed animation styles */}
       {/* Hero Section */}
       <section className="bg-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <h1 className="text-4xl font-bold mb-6">{t.competitions}</h1>
-          {/* <p className="text-slate-300 max-w-3xl">{t.competitionsIntro}</p> */}
         </div>
       </section>
 
@@ -61,11 +59,11 @@ const Competitions = () => {
                 {/* Logo - Only render if logo exists */}
                 {competition.logo ? (
                   <div className="flex justify-center lg:justify-end">
-                    <div className="w-48 h-48 rounded-full bg-slate-50 p-4 flex items-center justify-center shadow-md">
+                    <div className="w-64 h-64 rounded-xl bg-white p-4 flex items-center justify-center shadow-md">
                       <img 
                         src={competition.logo}
                         alt={competition.title}
-                        className="w-36 h-36 object-contain"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>

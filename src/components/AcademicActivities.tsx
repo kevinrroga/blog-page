@@ -9,22 +9,22 @@ const AcademicActivities = () => {
     {
       title: t.ahrcTitle,
       description: t.ahrcDescription,
-      logo: '../assets/ahrc.jpg' // You'll need to add this image
+      logo: '../assets/ahrc.jpg'
     },
     {
       title: t.roleTitle,
       description: t.roleDescription,
-      logo: '../assets/rule_law.jpg' // You'll need to add this image
+      logo: '../assets/rule_law.jpg'
     },
     {
       title: t.lawReviewTitle,
       description: t.lawReviewDescription,
-      logo: '../assets/lrg.jpg' // You'll need to add this image
+      logo: '../assets/lrg.jpg'
     },
     {
       title: t.lrgTitle,
       description: t.lrgDescription,
-      logo: '../assets/lrg.jpg' // You'll need to add this image
+      logo: '../assets/lrg.jpg'
     }
   ];
 
@@ -78,11 +78,13 @@ const AcademicActivities = () => {
 
                 {/* Logo */}
                 <div className="flex justify-center lg:justify-end">
-                  <img 
-                    src={activity.logo}
-                    alt={activity.title}
-                    className="w-48 h-48 object-contain"
-                  />
+                  <div className="bg-white rounded-lg flex items-center justify-center w-56 h-56 p-4 shadow">
+                    <img 
+                      src={activity.logo}
+                      alt={activity.title}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
                 </div>
               </div>
             ))}

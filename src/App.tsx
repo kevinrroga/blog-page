@@ -28,25 +28,27 @@ function HomePage() {
 
 function App() {
   return (
-    <Router>
-      <LanguageProvider>
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route element={<Layout />}>
-              <Route index element={<HomePage />} />
-              <Route path="/history" element={<HistoryPage />} />
-              <Route path="/board" element={<BoardPage />} />
-              <Route path="/academic-activities" element={<AcademicActivities />} />
-              <Route path="/competitions" element={<Competitions />} />
-              <Route path="/professional-development" element={<ProfessionalDevelopment />} />
-              <Route path="/seminars-conferences" element={<SeminarsConferences />} />
-              <Route path="/alumni" element={<Alumni />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Route>
-          </Routes>
-        </AnimatePresence>
-      </LanguageProvider>
-    </Router>
+    <div className="w-full overflow-x-hidden">
+      <Router>
+        <LanguageProvider>
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route element={<Layout />}>
+                <Route index element={<HomePage />} />
+                <Route path="/history" element={<HistoryPage />} />
+                <Route path="/board" element={<BoardPage />} />
+                <Route path="/academic-activities" element={<AcademicActivities />} />
+                <Route path="/competitions" element={<Competitions />} />
+                <Route path="/professional-development" element={<ProfessionalDevelopment />} />
+                <Route path="/seminars-conferences" element={<SeminarsConferences />} />
+                <Route path="/alumni" element={<Alumni />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Route>
+            </Routes>
+          </AnimatePresence>
+        </LanguageProvider>
+      </Router>
+    </div>
   )
 }
 
