@@ -110,7 +110,7 @@ const Footer = () => {
           <div className="lg:col-span-1 flex flex-col items-center">
             <h3 className="text-base font-bold mb-4 uppercase tracking-wide">{t.quickLinks}</h3>
             <div className="space-y-2 text-sm">
-              <div><a href="/board" className="text-gray-300 hover:text-white transition-colors">Board and Team</a></div>ont
+              <div><a href="/board" className="text-gray-300 hover:text-white transition-colors">Board and Team</a></div>
               <div><a href="#" className="text-gray-300 hover:text-white transition-colors">Contact Form</a></div>
               <div><a href="#" className="text-gray-300 hover:text-white transition-colors">Projects</a></div>
             </div>

@@ -87,9 +87,14 @@ const Header = () => {
               </button>
               {activeDropdown === 'about' && (
                 <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-md shadow-lg py-2 z-50">
-                  <Link to="/history" className="block px-4 py-2 hover:bg-slate-700">
+                  <a 
+                    href="https://elsa.org/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="block px-4 py-2 hover:bg-slate-700"
+                  >
                     {t.ElsaInternational}
-                  </Link>
+                  </a>
                   <Link to="/" className="block px-4 py-2 hover:bg-slate-700">
                     {t.ElsaAlbania}
                   </Link>
@@ -214,9 +219,14 @@ const Header = () => {
               {mobileOpenSection === 'about' && (
                 <ul id="about-submenu" className="mt-1 ml-2 border-l border-slate-700 pl-3 space-y-1">
                   <li>
-                    <Link to="/history" className="block px-3 py-2 rounded hover:bg-slate-700">
+                    <a 
+                      href="https://elsa.org/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="block px-3 py-2 rounded hover:bg-slate-700"
+                    >
                       {t.ElsaInternational}
-                    </Link>
+                    </a>
                   </li>
                   <li>
                     <Link to="/" className="block px-3 py-2 rounded hover:bg-slate-700">
