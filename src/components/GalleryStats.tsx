@@ -45,22 +45,77 @@ const GalleryStats = () => {
 
   const partners = [
     {
-      logo: '/images/partner1.png',
-      name: 'Partner Organization 1',
+      logo: '../assets/frostfire.jpeg', // Move to public/images if not already there
+      name: 'Frost & Fire',
       description: 'Supporting legal excellence',
     },
     {
-      logo: '/images/partner2.png',
+      logo: '../assets/lrg.jpg', // Move to public/images if not already there
       name: 'Partner Organization 2',
       description: 'Advancing legal education',
     },
     {
-      logo: '/images/partner3.png',
-      name: 'Partner Organization 3',
+      logo: '../assets/fdut.jpeg',
+      name: 'Fakulteti i Drejtësisë',
       description: 'International cooperation',
     },
     {
-      logo: '/images/partner4.png',
+      logo: '../assets/halimi.jpeg',
+      name: 'Halimi Law & Tax',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/europiani.jpg',
+      name: 'Universiteti Europian i Tiranes',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/epoka university.jpg',
+      name: 'Epoka University',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/komitetihelsinkit.jpeg',
+      name: 'Komiteti Shqiptar i Helsinkit',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/ndi.jpeg',
+      name: 'NDI',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/ministriadrejtesise.jpg',
+      name: 'Ministria e Drejtësisë',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/osce.jpeg',
+      name: 'OSCE',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/vcs.jpg',
+      name: 'VCS',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/ryco.jpg',
+      name: 'Regional Youth Cooperation Office',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/bba.jpeg',
+      name: 'Beyond Barriers Association',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/qq.jpg',
+      name: 'Qëndresa Qytetare',
+      description: 'Professional development',
+    },
+    {
+      logo: '../assets/lawfirm.jpg',
       name: 'Partner Organization 4',
       description: 'Professional development',
     },
@@ -97,8 +152,12 @@ const GalleryStats = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group flex flex-col items-center"
               >
-                <div className="w-32 h-32 bg-white rounded-xl shadow-lg flex items-center justify-center mb-4 transform transition-all duration-300 hover:shadow-orange-500/20 hover:-translate-y-1">
-                  <div className="w-24 h-24 bg-slate-100 rounded-lg group-hover:scale-105 transition-transform duration-300" />
+                <div className="w-40 h-40 bg-white rounded-xl shadow-lg flex items-center justify-center mb-4 transform transition-all duration-300 hover:shadow-orange-500/20 hover:-translate-y-1">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="w-36 h-36 object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
 
                 <h3 className="text-orange-400 font-medium mb-1">
