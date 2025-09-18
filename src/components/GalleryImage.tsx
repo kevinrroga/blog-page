@@ -14,9 +14,9 @@ const GalleryImage = ({ src, alt }: GalleryImageProps) => {
         src={src} 
         alt={alt}
         className={`
-          h-full w-full object-cover object-center
+          h-full w-full object-cover group-hover:object-contain object-center
           ${isLoaded ? 'opacity-100' : 'opacity-0'}
-          transition-opacity duration-300
+          transition-all duration-300
         `}
         onLoad={() => setIsLoaded(true)}
       />
