@@ -21,7 +21,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://elsa-albania.org">
     
-    <!-- Your existing security meta tags -->
+    <!-- Security meta tags -->
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       script-src 'self';
@@ -29,7 +29,6 @@
       img-src 'self' data: https://flagcdn.com;
       font-src 'self' data:;
       connect-src 'self';
-      frame-ancestors 'self';
       base-uri 'self';
       form-action 'self';
     ">
@@ -38,6 +37,17 @@
     
     <!-- Update the title to be more descriptive -->
     <title>ELSA Albania - The European Law Students' Association</title>
+
+    <!-- Add to your index.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="/assets/elsa-logo-white.png" as="image">
+    <style>
+      /* Critical CSS for header and top content */
+      body { margin: 0; font-family: system-ui, sans-serif; }
+      .bg-slate-900 { background-color: #0f172a; }
+      .text-white { color: white; }
+      /* Add more critical styles */
+    </style>
   </head>
   <body>
     <div id="root"></div>

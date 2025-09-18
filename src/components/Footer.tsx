@@ -33,11 +33,9 @@ const Footer = () => {
     <footer className="bg-slate-900 text-white relative">
       {/* Decorative Divider */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[60px]">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-                className="fill-white/5"></path>
-          <path d="M1200,0H0V27.35a600.21,600.21,0,0,0,321.39,29.09c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3" 
-                className="fill-slate-800"></path>
+        <svg width="1200" height="60" viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-[60px]">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" 
+                  className="fill-slate-800"></path>
         </svg>
       </div>
       <div className="max-w-7xl mx-auto px-8 lg:px-12 pt-24 pb-16">
@@ -131,18 +129,20 @@ const Footer = () => {
         <div className="lg:col-span-1 flex flex-col items-center mt-12">
           <h3 className="text-base font-bold mb-4 uppercase tracking-wide">Follow Us</h3>
           <div className="flex space-x-4">
-            <a href="https://facebook.com/elsaalbania" target="_blank" rel="noopener noreferrer"
-              className="text-slate-300 hover:text-orange-400 transition-colors">
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a href="https://instagram.com/elsa_albania" target="_blank" rel="noopener noreferrer"
-              className="text-slate-300 hover:text-orange-400 transition-colors">
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a href="https://linkedin.com/company/elsa-albania" target="_blank" rel="noopener noreferrer"
-              className="text-slate-300 hover:text-orange-400 transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
+            {['facebook', 'instagram', 'linkedin'].map((platform) => (
+              <a 
+                key={platform}
+                href={`https://${platform}.com/elsaalbania`} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-300 hover:text-orange-400 transition-colors transform hover:scale-110 will-change-transform"
+                aria-label={`Follow us on ${platform}`}
+              >
+                {platform === 'facebook' && <Facebook className="w-5 h-5" />}
+                {platform === 'instagram' && <Instagram className="w-5 h-5" />}
+                {platform === 'linkedin' && <Linkedin className="w-5 h-5" />}
+              </a>
+            ))}
           </div>
         </div>
 
