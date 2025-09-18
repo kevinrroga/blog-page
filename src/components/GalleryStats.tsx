@@ -10,28 +10,24 @@ const GalleryStats = () => {
 
   const images = [
     {
-      src: '/images/ahc.png',
+      src: '/assets/imazh1.jpeg',
       alt: t.legalConference,
     },
     {
-      src: '/images/ice.png',
+      src: '/assets/imazh2.jpeg',
       alt: t.modernCourthouse,
     },
     {
-      src: '/images/j.png',
+      src: '/assets/imazh3.jpeg',
       alt: t.legalAssembly,
     },
     {
-      src: '/images/wels.png',
+      src: '/assets/imazh4.jpeg',
       alt: t.academicGathering,
     },
     {
-      src: '/images/sels.png',
-      alt: 'International Conference',
-    },
-    {
-      src: '/images/color_career.jpg',
-      alt: 'Legal Symposium',
+      src: '/assets/imazh5.jpeg',
+      alt: t.legalAssembly,
     },
   ];
 

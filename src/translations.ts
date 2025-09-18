@@ -19,8 +19,7 @@ export const translations = {
     // heroScholarly: 'SCHOLARLY.',
     // heroCollaborative: 'COLLABORATIVE.',
     // heroGlobal: 'GLOBAL.',
-    heroDescription: 'The German chapter of the International Legal Students\' Network (LSA) comprises over 15,000 members, including law students and emerging legal practitioners. As members of the world\'s premier legal education network, they engage in collaborative learning across universities, throughout Germany, and across Europe. Academic excellence and professional development serve as the foundation of our mission.',
-
+    heroDescription: 'ELSA Albania brings together law students and young legal professionals from across the country. As part of the world’s largest association of law students, they have the chance to connect and collaborate on multiple levels—at their universities, across Albania and throughout Europe. Guided by values of cultural exchange and social responsibility, ELSA Albania empowers its members to grow both personally and professionally while contributing to a more just and open society.',
     // Philosophy Section
     missionTitle: 'THE PHILOSOPHY\nSTATEMENT OF LSA',
     sinceMarch: 'SINCE MARCH 15TH, 1995',
@@ -133,8 +132,7 @@ export const translations = {
     heroScholarly: 'AKADEMIK.',
     heroCollaborative: 'BASHKËPUNUES.',
     heroGlobal: 'GLOBAL.',
-    heroDescription: 'Dega gjermane e Rrjetit Ndërkombëtar të Studentëve të Drejtësisë (ELSA) përbëhet nga mbi 15,000 anëtarë, përfshirë studentë të drejtësisë dhe profesionistë të rinj ligjorë. Si anëtarë të rrjetit më të rëndësishëm të edukimit ligjor në botë, ata angazhohen në të mësuarit bashkëpunues në universitete, në të gjithë Gjermaninë dhe në të gjithë Evropën. Ekselenca akademike dhe zhvillimi profesional shërbejnë si themeli i misionit tonë.',
-
+    heroDescription: 'ELSA Shqipëri bashkon studentë të drejtësisë dhe profesionistë të rinj ligjorë nga e gjithë vendi. Si pjesë e shoqatës më të madhe në botë të studentëve të drejtësisë, ata kanë mundësinë të lidhen dhe të bashkëpunojnë në shumë nivele—në universitetet e tyre, në gjithë Shqipërinë dhe në mbarë Evropën. Të udhëhequr nga vlerat e shkëmbimit kulturor dhe përgjegjësisë sociale, ELSA Shqipëri fuqizon anëtarët e saj të rriten si personalisht ashtu edhe profesionalisht, duke kontribuar në një shoqëri më të drejtë dhe më të hapur.',
     // Philosophy Section
     missionTitle: 'DEKLARATA E FILOZOFISË SË ELSA',
     sinceMarch: 'QË NGA 15 MARS 1995',
