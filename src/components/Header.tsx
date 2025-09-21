@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 import elsaLogo from '../../assets/elsa-logo-white.png';
-import { motion } from 'framer-motion';
 
 const Header = () => {
   const { language, setLanguage } = useLanguage();
@@ -12,8 +11,9 @@ const Header = () => {
 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null); // desktop dropdowns
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileOpenSection, setMobileOpenSection] = useState<string | null>(null); // 'about' | 'projects' | null
-  const [lastClicked, setLastClicked] = useState(0);
+  const [mobileOpenSection, setMobileOpenSection] = useState<string | null>(null); // mobile dropdowns
+  
+  const headerRef = useRef<HTMLElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
@@ -24,27 +24,47 @@ const Header = () => {
     setMobileOpenSection(null);
   }, [location.pathname]);
 
-  // Close desktop dropdown when clicking outside
+  // Handle clicks outside the menu to close dropdowns
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    function handleClickOutside(event: Event) {
+      // Close desktop dropdown if clicking outside
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setActiveDropdown(null);
       }
-    };
+      
+      // Close mobile menu if clicking outside header entirely
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+        setMobileOpenSection(null);
+      }
+    }
+    
+    // Add click and touch event listeners
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
   }, []);
 
-  const toggleDesktopDropdown = (name: string) => {
-    setActiveDropdown(prev => (prev === name ? null : name));
+  // Toggle mobile sections
+  const toggleMobileSection = (section: string) => {
+    setMobileOpenSection(prevSection => prevSection === section ? null : section);
   };
 
-  const toggleMobileSection = (name: string) => {
-    setMobileOpenSection(prev => (prev === name ? null : name));
-  };
+  function toggleDesktopDropdown(section: string): void {
+    setActiveDropdown(prev => prev === section ? null : section);
+  }
+  // Track last language button click to prevent rapid toggling
+  const [lastClicked, setLastClickedState] = useState(0);
 
+  function setLastClicked(now: number) {
+    setLastClickedState(now);
+  }
   return (
-    <header className="bg-slate-900 text-white">
+    <header ref={headerRef} className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Logo/Title */}
@@ -79,14 +99,20 @@ const Header = () => {
             <div className="relative">
               <button
                 type="button"
-                onClick={() => toggleDesktopDropdown('about')}
-                className="px-3 py-2 rounded hover:bg-slate-800"
-                aria-label="About Us dropdown"
+                onClick={() => setActiveDropdown(activeDropdown === 'about' ? null : 'about')}
+                className="px-3 py-2 rounded hover:bg-slate-800 flex items-center gap-1"
+                aria-expanded={activeDropdown === 'about'}
+                aria-controls="about-dropdown"
               >
                 {t.aboutUs}
+                <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
               </button>
+              
+              {/* Desktop About Dropdown */}
               {activeDropdown === 'about' && (
-                <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-md shadow-lg py-2 z-50">
+                <div id="about-dropdown" className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-md shadow-lg py-2 z-50">
                   <a 
                     href="https://elsa.org/" 
                     target="_blank" 
@@ -207,7 +233,7 @@ const Header = () => {
             <div className="mt-1">
               <button
                 type="button"
-                className="w-full text-left px-3 py-2 rounded hover:bg-slate-700"
+                className="w-full text-left px-3 py-2 rounded hover:bg-slate-700 flex items-center justify-between"
                 onClick={() => toggleMobileSection('about')}
                 aria-expanded={mobileOpenSection === 'about'}
                 aria-controls="about-submenu"
@@ -251,7 +277,7 @@ const Header = () => {
             <div className="mt-1">
               <button
                 type="button"
-                className="w-full text-left px-3 py-2 rounded hover:bg-slate-700"
+                className="w-full text-left px-3 py-2 rounded hover:bg-slate-700 flex items-center justify-between"
                 onClick={() => toggleMobileSection('projects')}
                 aria-expanded={mobileOpenSection === 'projects'}
                 aria-controls="projects-submenu"
