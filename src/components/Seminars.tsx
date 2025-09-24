@@ -85,19 +85,19 @@ const SeminarsConferences = () => {
                   {/* Only render logo section if logo exists */}
                   {event.logo && (
                     <div className="lg:col-span-1 p-8 flex flex-col items-center justify-center space-y-6 bg-gradient-to-br from-slate-50 to-blue-50">
-                      <div className="w-48 h-48 rounded-full bg-white p-6 shadow-lg flex items-center justify-center border-2 border-blue-50">
+                      <div className="w-48 h-48 rounded-full bg-white p-8 shadow-lg flex items-center justify-center border-2 border-blue-50">
                         <img 
                           src={event.logo}
                           alt={event.title}
-                          className="w-36 h-36 object-contain"
+                          className="w-32 h-32 object-contain"
                         />
                       </div>
                       {event.secondaryLogo && (
-                        <div className="w-48 h-48 rounded-full bg-white p-6 shadow-lg flex items-center justify-center border-2 border-blue-50">
+                        <div className="w-48 h-48 rounded-full bg-white p-8 shadow-lg flex items-center justify-center border-2 border-blue-50">
                           <img 
                             src={event.secondaryLogo}
                             alt={`${event.title} Secondary`}
-                            className="w-36 h-36 object-contain"
+                            className="w-32 h-32 object-contain"
                           />
                         </div>
                       )}
