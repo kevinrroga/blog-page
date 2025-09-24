@@ -129,20 +129,33 @@ const Footer = () => {
         <div className="lg:col-span-1 flex flex-col items-center mt-12">
           <h3 className="text-base font-bold mb-4 uppercase tracking-wide">Follow Us</h3>
           <div className="flex space-x-4">
-            {['facebook', 'instagram', 'linkedin'].map((platform) => (
-              <a 
-                key={platform}
-                href={`https://${platform}.com/elsaalbania`} 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-300 hover:text-orange-400 transition-colors transform hover:scale-110 will-change-transform"
-                aria-label={`Follow us on ${platform}`}
-              >
-                {platform === 'facebook' && <Facebook className="w-5 h-5" />}
-                {platform === 'instagram' && <Instagram className="w-5 h-5" />}
-                {platform === 'linkedin' && <Linkedin className="w-5 h-5" />}
-              </a>
-            ))}
+            <a 
+              href="https://www.facebook.com/elsaalbania" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 hover:text-orange-400 transition-colors transform hover:scale-110 will-change-transform"
+              aria-label="Follow us on Facebook"
+            >
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.instagram.com/elsa_albania" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 hover:text-orange-400 transition-colors transform hover:scale-110 will-change-transform"
+              aria-label="Follow us on Instagram"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/company/elsa-albania/posts/?feedView=all" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 hover:text-orange-400 transition-colors transform hover:scale-110 will-change-transform"
+              aria-label="Follow us on LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
           </div>
         </div>
 

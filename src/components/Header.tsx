@@ -127,9 +127,6 @@ const Header = () => {
                   <Link to="/board" className="block px-4 py-2 hover:bg-slate-700">
                     {t.NationalBoard}
                   </Link>
-                  <Link to="/history" className="block px-4 py-2 hover:bg-slate-700">
-                    {t.History}
-                  </Link>
                 </div>
               )}
             </div>
@@ -139,10 +136,13 @@ const Header = () => {
               <button
                 type="button"
                 onClick={() => toggleDesktopDropdown('projects')}
-                className="px-3 py-2 rounded hover:bg-slate-800"
+                className="px-3 py-2 rounded hover:bg-slate-800 flex items-center gap-1"
                 aria-label="Projects dropdown"
               >
                 {t.projects}
+                <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
               </button>
               {activeDropdown === 'projects' && (
                 <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-2 z-50">
@@ -265,9 +265,6 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/history" className="block px-3 py-2 rounded hover:bg-slate-700">
-                      {t.History}
-                    </Link>
                   </li>
                 </ul>
               )}

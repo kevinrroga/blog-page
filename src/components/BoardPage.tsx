@@ -100,15 +100,15 @@ const BoardPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <div className="relative aspect-[16/10] rounded-lg overflow-hidden shadow-2xl"> {/* Changed aspect ratio from 16/9 to 16/10 */}
+            <div className="relative aspect-[16/10] rounded-lg overflow-hidden shadow-2xl">
               <img 
                 src={boardGroupPhoto}
                 alt="ELSA Albania National Board 2025/2026"
-                className="w-full h-full object-cover object-center" // Added object-center
+                className="w-full h-full object-cover object-center scale-105 object-[-5%_center]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"/>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white"> {/* Increased padding from p-6 to p-8 */}
-                <h2 className="text-3xl font-semibold"> {/* Increased text size from 2xl to 3xl */}
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <h2 className="text-3xl font-semibold">
                   2025/2026 National Board of ELSA Albania
                 </h2>
               </div>
@@ -122,7 +122,7 @@ const BoardPage = () => {
                 <AnimatedSection key={member.name} delay={index * 0.1}>
                   <div className="text-center">
                     <motion.div 
-                      className="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden"
+                      className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden" 
                       whileHover={{ scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
@@ -151,7 +151,7 @@ const BoardPage = () => {
                 <AnimatedSection key={member.name} delay={(index + 1) * 0.1}>
                   <div className="text-center">
                     <motion.div 
-                      className="w-32 h-32 mx-auto mb-3 rounded-full overflow-hidden"
+                      className="w-40 h-40 mx-auto mb-3 rounded-full overflow-hidden"
                       whileHover={{ scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
@@ -180,7 +180,7 @@ const BoardPage = () => {
                 <AnimatedSection key={member.name} delay={(index + 1) * 0.1}>
                   <div className="text-center">
                     <motion.div 
-                      className="w-32 h-32 mx-auto mb-3 rounded-full overflow-hidden"
+                      className="w-40 h-40 mx-auto mb-3 rounded-full overflow-hidden"
                       whileHover={{ scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >

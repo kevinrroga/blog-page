@@ -5,7 +5,6 @@ import HeroSection from './components/HeroSection'
 import PhilosophySection from './components/PhilosophySection'
 import GalleryStats from './components/GalleryStats'
 import PageTransition from './components/PageTransition';
-import HistoryPage from './components/HistoryPage';
 import BoardPage from './components/BoardPage';
 import Layout from './components/Layout';
 import AcademicActivities from './components/AcademicActivities';
@@ -35,7 +34,6 @@ function App() {
             <Routes>
               <Route element={<Layout />}>
                 <Route index element={<HomePage />} />
-                <Route path="/history" element={<HistoryPage />} />
                 <Route path="/board" element={<BoardPage />} />
                 <Route path="/academic-activities" element={<AcademicActivities />} />
                 <Route path="/competitions" element={<Competitions />} />

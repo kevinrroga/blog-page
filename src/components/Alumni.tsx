@@ -38,37 +38,43 @@ const Alumni = () => {
       name: 'Dhimitër Zguro',
       position: 'Associate - Halimi Law & Tax',
       photo: '/assets/dhimiter.jpg',
-      currentRole: ''
+      currentRole: '',
+      linkedinUrl: 'https://halimi.al/en/avokatet/dhimiter-zguro/' // Add LinkedIn URLs
     },
     {
       name: 'Sofjan Jaupaj',
       position: 'Minister of Environment of the Republic of Albania',
       photo: '/assets/sofjan.jpg',
-      currentRole: ''
+      currentRole: '',
+      linkedinUrl: 'https://en.wikipedia.org/wiki/Sofjan_Jaupaj'
     },
     {
       name: 'Glen Mebelli Bardhi',
       position: 'Advisor to the Speaker of the Parliament and Chevening Scholar',
       photo: '/assets/glen.jpg',
-      currentRole: ''
+      currentRole: '',
+      linkedinUrl: 'https://www.linkedin.com/in/glenmebellibardhi/'
     },
     {
       name: 'Gladiola Ago',
       position: 'Senior Associate - Boga & Associates',
       photo: '/assets/gladiola.jpg',
-      currentRole: ''
+      currentRole: '',
+      linkedinUrl: 'https://www.linkedin.com/in/gladiola-ago/'
     },
     {
       name: 'Bora Kola',
       position: 'National Legal Expert - OSCE Presence in Albania',
       photo: '/assets/bora.png',
-      currentRole: ''
+      currentRole: '',
+      linkedinUrl: 'https://www.linkedin.com/in/bora-kola/'
     },
     {
       name: 'Fiona Kamberi',
       position: 'Associate - Frost & Fire Consulting',
       photo: '/assets/fiona.png',
-      currentRole: ''
+      currentRole: '',
+      linkedinUrl: 'https://www.linkedin.com/in/fiona-kamberi/'
     }
   ];
 
@@ -110,22 +116,42 @@ const Alumni = () => {
                 variants={cardVariants}
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
               >
-                {/* Photo with fade-in and scale effect */}
-                <motion.div 
-                  className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
+                {/* Photo with fade-in and scale effect - now wrapped with LinkedIn link */}
+                <a 
+                  href={member.linkedinUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="block"
                 >
-                  <img
-                    src={member.photo}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </motion.div>
+                  <motion.div 
+                    className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden group relative"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* LinkedIn overlay on hover */}
+                    <div className="absolute inset-0 bg-blue-800/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#FFFFFF">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      </svg>
+                    </div>
+                  </motion.div>
+                </a>
 
-                {/* Content */}
+                {/* Name now wrapped in LinkedIn link */}
                 <h3 className="text-xl font-semibold text-center text-slate-900 mb-2">
-                  {member.name}
+                  <a 
+                    href={member.linkedinUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-700 transition-colors"
+                  >
+                    {member.name}
+                  </a>
                 </h3>
 
                 <div className="w-16 h-1 bg-orange-400 mx-auto mb-4"></div>
@@ -137,21 +163,6 @@ const Alumni = () => {
               </motion.div>
             ))}
           </motion.div>
-        </div>
-      </section>
-
-      {/* Join Alumni Network CTA */}
-      <section className="py-20 bg-orange-50">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            {t.alumniNetwork}
-          </h2>
-          <p className="text-lg text-slate-600 mb-8">
-            {t.joinAlumniDescription}
-          </p>
-          <button className="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors">
-            {t.connectWithUs}
-          </button>
         </div>
       </section>
     </main>

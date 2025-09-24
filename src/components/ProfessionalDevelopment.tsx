@@ -7,7 +7,7 @@ const ProfessionalDevelopment = () => {
 
   const professionalDevelopmentItems = [
     {
-      title: 'Traineeship',
+      title: 'ELSA Traineeships',
       description: t.elseTraineeshipDescription, // Use your translation or original text
       logo: '../assets/traineeship.jpg'
     },

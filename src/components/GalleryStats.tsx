@@ -87,7 +87,7 @@ const GalleryStats = () => {
     },
     {
       logo: '../assets/vcs.jpg',
-      name: 'VCS',
+      name: 'CleanScore',
 
     },
     {

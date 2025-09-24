@@ -10,6 +10,8 @@ export const translations = {
     professionalDevelopment: 'Professional Development',
     competitions: 'Competitions',
     seminarsConferences: 'Seminars & Conferences',
+    valuesTitle: "Our Values",
+    valuesText: "We value integrity, professionalism, and collaboration.",
 
     networkTitle: 'The European Law Students\' Association',
     location: 'ALBANIA',
@@ -49,14 +51,12 @@ export const translations = {
     chaptersDescription: 'Active across Germany.',
 
     // About Section
-    aboutHistory: 'Our History',
     aboutMission: 'Mission & Vision',
     aboutTeam: 'Our Team',
     aboutPartners: 'Partners',
     ElsaInternational: "ELSA International",
     ElsaAlbania: "Elsa Albania",
     NationalBoard: "National Board",
-    History: "Our History",
     boardTitle: "National Board",
     boardDescription: "Meet the dedicated members of the ELSA Albania National Board.",
 
@@ -105,13 +105,16 @@ export const translations = {
     alumni: 'Alumni',
     alumniNetwork: 'ELSA Alumni Network',
     alumniIntro: 'Connect with former ELSA members who have gone on to achieve remarkable success in their legal careers.',
-    successStories: 'Success Stories',
+    successStories: 'Our Alumni',
     joinAlumniNetwork: 'Stay Connected',
     joinAlumniDescription: 'Join our alumni network to stay connected with fellow ELSA graduates and access exclusive opportunities.',
     connectWithUs: 'Connect With Us',
     alumniCurrentRole: 'Current Role',
     alumniFormerPosition: 'Former Position at ELSA',
     ourPartners: 'Our Partners',
+    purposeTitle: "Our Purpose", // <-- Added property
+    purposeText: "To promote legal education and cooperation among students.", // (if missing)
+    
   },
   al: {
     // Header
@@ -123,10 +126,13 @@ export const translations = {
     competitions: 'Kompeticione',
     professionalDevelopment: 'Zhvillim Profesional',
     seminarsConferences: 'Seminare & Konferenca',
-
+    valuesTitle: "Vlerat Tona",
+    valuesText: "Ne vlerësojmë integritetin, profesionalizmin dhe bashkëpunimin.",
+    
     networkTitle: 'Rrjeti Ndërkombëtar i Studentëve të Drejtësisë',
     location: 'SHQIPËRI',
-
+    purposeTitle: "Qëllimi Ynë", // <-- Added property
+    purposeText: "Të promovojmë edukimin ligjor dhe bashkëpunimin midis studentëve.", // (if missing)
     // Hero Section
     heroSubtitle: 'Rrjeti Ndërkombëtar i Studentëve të Drejtësisë',
     heroScholarly: 'AKADEMIK.',
@@ -184,24 +190,24 @@ export const translations = {
     helgaPedersenDescription: 'Konkursi Gjyqësor Helga Pedersen është konkursi kryesor gjyqësor për Konventën Evropiane të të Drejtave të Njeriut në bashkëpunim me Këshillin e Evropës. Ai u ofron studentëve të drejtësisë një mundësi unike për t\'u angazhuar thellësisht me ligjin e të drejtave të njeriut duke simuluar procedurat para Gjykatës Evropiane të të Drejtave të Njeriut. Pjesëmarrësit veprojnë si kërkues dhe qeveri, duke hartuar parashtesa me shkrim dhe duke paraqitur argumente gojore për çështje komplekse të të drejtave të njeriut. Përtej nxitjes së aftësive të kërkimit ligjor, avokatisë dhe punës në ekip, konkursi u ofron studentëve ekspozim të drejtpërdrejtë ndaj funksionimit të sistemit të Strasburgut dhe vlerave që mbështesin Konventën.',
     johnJacksonTitle: 'Konkursi Gjyqësor John H. Jackson',
     johnJacksonDescription: 'Konkursi Gjyqësor John H. Jackson është një konkurs prestigjioz ndërkombëtar gjyqësor mbi ligjin e Organizatës Botërore të Tregtisë (OBT) me mbështetjen e OBT-së. Ai sfidon studentët e drejtësisë të angazhohen me ligjin ndërkombëtar të tregtisë duke simuluar mosmarrëveshjet midis shteteve anëtare të OBT-së përpara sistemit të zgjidhjes së mosmarrëveshjeve të organizatës. Pjesëmarrësit përgatisin parashtesa me shkrim dhe paraqesin argumente gojore, duke marrë rolet e ankuesve, të paditurve dhe palëve të treta. Konkursi jo vetëm që mpreh aftësitë në kërkimin ligjor, avokimin dhe negocimin, por gjithashtu u ekspozon studentëve funksionimin praktik të ligjit ekonomik ndërkombëtar.',
-    encTitle: 'Konkursi i Negociatave ELSA Shqipëri',
+    encTitle: 'Konkursi i Negocimit ELSA Albania',
     encDescription: 'Konkursi i Negociatave ELSA (ENC) është një konkurs interaktiv që simulon një proces negocimi midis dy ekipeve. Pjesëmarrësit veprojnë si përfaqësues ligjorë të dy palëve hipotetike të cilët - pavarësisht interesave të kundërta - përpiqen të gjejnë një terren të përbashkët për një kontratë ose një mosmarrëveshje. Qëllimi nuk është vetëm nënshkrimi i një kontrate ose zgjidhja e një mosmarrëveshjeje, por edhe përmbushja e interesave të klientit sa më shumë që të jetë e mundur. Për këtë arsye, çdo ekip merr informacion shtesë dhe konfidencial përveç informacionit të disponueshëm në përgjithësi, duke specifikuar cilat qëllime duhet të arrihen.',
-    mootCourtTitle: 'Konkursi Gjyqësor ELSA Shqipëri',
+    mootCourtTitle: 'Konkursi Gjyqësor i ELSA Albania',
     mootCourtDescription: 'Konkurset Gjyqësore janë në thelb të aktiviteteve tona. Ato rriten brenda Rrjetit tonë çdo vit. Ky lloj konkursi njihet në mbarë botën si një nga ushtrimet më të mira përgatitore për studentët që mund t\'i pajisë avokatët e ardhshëm me njohuri juridike, si dhe me një set aftësish praktike që do t\'i përdorin në profesionin e tyre. Gjykata Simuluese hedh urën midis teorisë dhe praktikës duke u dhënë studentëve të drejtësisë mundësinë të veprojnë si përfaqësues për palët fiktive në një çështje në gjykatë, të negociojnë një çështje dhe kështu të përpiqen të punojnë si një praktikues i ligjit.',
 
     // Professional Development Section
     pdIntro: 'Eksploroni mundësitë për të fituar përvojë praktike dhe zhvilluar aftësitë tuaja profesionale përmes programeve tona të ndryshme.',
     elseTraineeshipTitle: 'Praktikat ELSA',
-    elseTraineeshipDescription: 'Praktikat ELSA është programi i praktikave i ELSA-s që ofron mundësi për anëtarët e ELSA-s për të fituar përvojë pune ligjore të dorës së parë në organizata të ndryshme (ndër të tjera firma ligjore, kompani, banka, universitete, institucione publike dhe private, dhe gjykata) në juridiksione të ndryshme brenda dhe jashtë Evropës. Kohët e fundit, Praktikat ELSA ka mundësuar gjithashtu mundësinë për të marrë pjesë në përvoja të tilla në mënyrë të largët.',
-    careerLaunchTitle: 'Hapi i Karrierës',
-    careerLaunchDescription: 'Hapi i Karrierës është një projekt i zhvillimit profesional i ELSA-s që ofron mundësinë për të fituar njohuri mbi profesione të ndryshme ligjore. Misioni i Hapit të Karrierës është të përgatisë studentët e drejtësisë për botën profesionale përmes serive webinar, seancave praktike, Panaireve të Karrierës dhe intervistave simulimi. Ai synon të sigurojë studentëve të drejtësisë dhe juristëve të rinj një përvojë reale të tregut të punës dhe njohuri mbi rrugë të ndryshme karriere që nuk janë pjesë e kurrikulës tipike ligjore.',
+    elseTraineeshipDescription: 'ELSA Traineeships është programi i praktikave i ELSA-s që ofron mundësi për anëtarët e ELSA-s për të fituar përvojë pune ligjore të dorës së parë në organizata të ndryshme (ndër të tjera firma ligjore, kompani, banka, universitete, institucione publike dhe private, dhe gjykata) në juridiksione të ndryshme brenda dhe jashtë Evropës. Kohët e fundit, Praktikat ELSA ka mundësuar gjithashtu mundësinë për të marrë pjesë në përvoja të tilla në mënyrë të largët.',
+    careerLaunchTitle: 'Career Launch',
+    careerLaunchDescription: 'Career Launch është një projekt i zhvillimit profesional i ELSA-s që ofron mundësinë për të fituar njohuri mbi profesione të ndryshme ligjore. Misioni i Career Launch është të përgatisë studentët e drejtësisë për botën profesionale përmes serive webinar, seancave praktike, Panaireve të Karrierës dhe intervistave simulimi. Ai synon të sigurojë studentëve të drejtësisë dhe juristëve të rinj një përvojë reale të tregut të punës dhe njohuri mbi rrugë të ndryshme karriere që nuk janë pjesë e kurrikulës tipike ligjore.',
     // New Section: Lawyers @ Work
     lawyersAtWorkTitle: 'Lawyers at work',
     lawyersAtWorkDescription: 'Eventet Lawyers at Work (L@W Events) janë projekte që u lejojnë studentëve të drejtësisë dhe juristëve të rinj të përjetojnë punën në profesionin ligjor drejtpërdrejt dhe të zbulojnë kulturën e punës dhe rrugët e ndryshme ligjore në të njëjtën kompani/firmë. Eventet L@W janë projektuar për të përfshirë njohuri praktike në profesionin ligjor dhe si të tilla do të përfshijnë mundësi të të mësuarit interaktiv midis profesionistëve dhe studentëve.',
     pdWorkshopsTitle: 'Workshopet e Zhvillimit Profesional',
     pdWorkshopsDescription: 'Workshopet e Zhvillimit Profesional tregojnë një projekt me qëllim ofrimin e njohurive dhe aftësive praktike për studentët e drejtësisë dhe juristët e rinj që nuk mund të ofrohen në kurrikulën e zakonshme akademike. Ato duhet të përbëhen nga minimumi dy orë seancë. Workshopet e ZhP duhet të planifikohen për të përfshirë ushtrime praktike që mund të jenë të dobishme në një karrierë ligjore. Kurset Ligjore, për këtë arsye, mund të organizohen për të mbuluar tema përfshirë por jo të kufizuara në: — Anglishte Ligjore; — Aftësi të buta dhe të forta (CV dhe letër motivimi, të folur publik, menaxhim krize, menaxhim kohe); — Marrëdhëniet me klientët. — Rrugët e karrierës',
-    lawSchoolsTitle: 'Shkollat Ligjore ELSA',
-    lawSchoolsDescription: 'Një Shkollë Ligjore ELSA është një event ndërkombëtar, që përbëhet nga një program akademik, kulturor dhe social, organizuar nga një grup lokal ose kombëtar i ELSA-s. Një Shkollë Ligjore ELSA është një event që synon të jetë vjetor, zhvillohet në anglisht dhe zgjat të paktën 7 ditë. Për më tepër, duhet të ketë minimum 20 orë program akademik me leksione, workshope dhe aktivitete të tjera akademike në javë dhe të alokojë kohë për detyrat e shtëpisë për të rishikuar leksionet dhe përgatitur mësimet e ardhshme. Për këtë arsye, Shkollat Ligjore ELSA kanë tema relativisht të gjera që mund të zgjasin për evente të njëpasnjëshme, p.sh., "Zgjidhja e Mosmarrëveshjeve" ose "E Drejta e Energjisë" etj.',
+    lawSchoolsTitle: 'ELSA Law Schools',
+    lawSchoolsDescription: 'Një ELSA Law School është një event ndërkombëtar, që përbëhet nga një program akademik, kulturor dhe social, organizuar nga një grup lokal ose kombëtar i ELSA-s. Një ELSA Law School është një event që synon të jetë vjetor, zhvillohet në anglisht dhe zgjat të paktën 7 ditë. Për më tepër, duhet të ketë minimum 20 orë program akademik me leksione, workshope dhe aktivitete të tjera akademike në javë dhe të alokojë kohë për detyrat e shtëpisë për të rishikuar leksionet dhe përgatitur mësimet e ardhshme. Për këtë arsye, ELSA Law Schools kanë tema relativisht të gjera që mund të zgjasin për evente të njëpasnjëshme, p.sh., "Zgjidhja e Mosmarrëveshjeve" ose "E Drejta e Energjisë" etj.',
     seminarsConferencesIntro: 'Eksploroni eventet tona ndërkombëtare dhe programet edukative të projektuara për të përmirësuar njohuritë tuaja ligjore dhe rrjetin.',
     delegationsTitle: 'Delegacionet ELSA',
     delegationsDescription: 'Një pjesë e rëndësishme e marrëdhënieve institucionale të ELSA-s përfaqësohet nga delegacionet e dërguara në sesionet e punës të organizatave ndërkombëtare. Ato janë si një mundësi e madhe për anëtarët tanë në aspektin e rritjes personale dhe profesionale, ashtu edhe një mjet përmes të cilit ELSA fiton një rol në diskutimin për zhvillimin e së drejtës ndërkombëtare dhe njohuri akademike të vlefshme dhe aktuale për t\'u përdorur në projektet tona. ELSA ka një status të veçantë dhe bashkëpunim me Organizatën Arsimore, Shkencore dhe Kulturore të OKB-së (UNESCO); Këshillin Ekonomik dhe Social të OKB-së (UN ECOSOC); Komisionin e OKB-së për të Drejtën Ndërkombëtare të Tregtisë (UNCITRAL); Zyrën e OKB-së për Drogën dhe Krimin (UNODC); Këshillin e Evropës; Zyrën e Komisionerit të Lartë të OKB-së për të Drejtës e Njeriut (OHCHR); Organizatën Botërore të Pronësisë Intelektuale (WIPO); Organizatën për Bashkëpunim dhe Zhvillim Ekonomik (OECD); Koalicionin për Gjykatën Ndërkombëtare Penale (CICC).',
@@ -214,7 +220,7 @@ export const translations = {
     alumni: 'Alumni',
     alumniNetwork: 'Rrjeti Alumni i ELSA-s',
     alumniIntro: 'Lidhuni me ish-anëtarët e ELSA-s që kanë arritur sukses të jashtëzakonshëm në karrierat e tyre ligjore.',
-    successStories: 'Histori Suksesi',
+    successStories: 'Alumni-t tanë',
     joinAlumniNetwork: 'Qëndroni të Lidhur',
     joinAlumniDescription: 'Bashkohuni me rrjetin tonë alumni për të qëndruar të lidhur me të diplomuarit e ELSA-s dhe për të aksesuar mundësi ekskluzive.',
     connectWithUs: 'Lidhuni Me Ne',
