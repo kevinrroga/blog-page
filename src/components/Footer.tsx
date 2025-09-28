@@ -29,6 +29,12 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const isMobileDevice = () => {
+    const regex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return regex.test(navigator.userAgent) || 
+           (navigator.maxTouchPoints && navigator.maxTouchPoints > 2);
+  };
+
   return (
     <footer className="bg-slate-900 text-white relative">
       {/* Decorative Divider */}
@@ -75,8 +81,7 @@ const Footer = () => {
               <a 
                 href={`tel:${t.phone.replace(/\s/g, '')}`}
                 onClick={(e) => {
-                  // If not on mobile, prevent default and copy instead
-                  if (!/Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                  if (!isMobileDevice()) {
                     e.preventDefault();
                     handlePhoneClick();
                   }
