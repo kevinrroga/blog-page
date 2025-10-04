@@ -12,10 +12,19 @@ import Competitions from './components/Competitions';
 import ProfessionalDevelopment from './components/ProfessionalDevelopment';
 import SeminarsConferences from './components/Seminars';
 import Alumni from './components/Alumni';
+import TeamPage from './components/TeamPage';
+import SEO from './components/SEO';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function HomePage() {
   return (
     <PageTransition>
+      <SEO 
+        title="ELSA Albania | Home"
+        description="The European Law Students' Association (ELSA) Albania is a non-political, independent, non-profit organisation run by and for law students and young lawyers."
+        url="https://elsa-albania.org/"
+      />
       <main>
         <HeroSection />
         <PhilosophySection />
@@ -30,6 +39,7 @@ function App() {
     <div className="w-full overflow-x-hidden">
       <Router>
         <LanguageProvider>
+          <Header />
           <AnimatePresence mode="wait">
             <Routes>
               <Route element={<Layout />}>
@@ -40,10 +50,12 @@ function App() {
                 <Route path="/professional-development" element={<ProfessionalDevelopment />} />
                 <Route path="/seminars-conferences" element={<SeminarsConferences />} />
                 <Route path="/alumni" element={<Alumni />} />
+                <Route path="/team" element={<TeamPage />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Route>
             </Routes>
           </AnimatePresence>
+          <Footer />
         </LanguageProvider>
       </Router>
     </div>

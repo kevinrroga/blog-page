@@ -45,30 +45,31 @@ const Footer = () => {
         </svg>
       </div>
       <div className="max-w-7xl mx-auto px-8 lg:px-12 pt-24 pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
           {/* Logo Section */}
-          <div className="flex flex-col items-center justify-center space-y-4">
-          <div className="h-28 flex items-center">
-            <img 
-              src={elsaLogo}
-              alt="ELSA Albania Logo"
-              className="h-full w-auto object-contain"
-            />
-          </div>
-          <div className="text-xs">
-            <div className="font-semibold text-sm mb-1">{t.networkTitle}</div>
-            <div className="text-slate-300">{t.location}</div>
-          </div>
-        </div>
+          <article className="flex flex-col items-center justify-center space-y-4">
+            <div className="h-28 flex items-center">
+              <img 
+                src={elsaLogo}
+                alt="ELSA Albania Logo"
+                className="h-full w-auto object-contain"
+              />
+            </div>
+            <div className="text-xs">
+              <div className="font-semibold text-sm mb-1">{t.networkTitle}</div>
+              <div className="text-slate-300">{t.location}</div>
+            </div>
+          </article>
 
           {/* Contact Section */}
-          <div className="lg:col-span-1 flex flex-col items-center">
+          <address className="lg:col-span-1 flex flex-col items-center not-italic">
             <h3 className="text-base font-bold mb-4 uppercase tracking-wide">{t.contact}</h3>
             <div className="space-y-3 text-sm">
               <a 
                 href={mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Find ELSA Albania on Google Maps"
                 className="flex items-start space-x-3 hover:text-orange-400 transition-colors group"
               >
                 <MapPin className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0 group-hover:text-orange-400" />
@@ -109,31 +110,73 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </address>
 
           {/* Quick Links Section */}
-          <div className="lg:col-span-1 flex flex-col items-center">
-            <h3 className="text-base font-bold mb-4 uppercase tracking-wide">{t.quickLinks}</h3>
-            <div className="space-y-2 text-sm">
-              <div><a href="/board" className="text-gray-300 hover:text-white transition-colors">Board and Team</a></div>
-              <div><a href="#" className="text-gray-300 hover:text-white transition-colors">Contact Form</a></div>
-              <div><a href="#" className="text-gray-300 hover:text-white transition-colors">Projects</a></div>
-            </div>
-          </div>
+          <nav className="lg:col-span-1 flex flex-col items-center">
+            <h3 className="text-base font-bold mb-4 uppercase tracking-wide" id="footer-links">{t.quickLinks}</h3>
+            <ul className="space-y-2 text-sm" aria-labelledby="footer-links">
+              <li>
+                <a 
+                  href="/board" 
+                  className="text-gray-300 hover:text-white transition-colors"
+                  title="Meet ELSA Albania's Board Members and Team"
+                >
+                  Board and Team
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/contact" 
+                  className="text-gray-300 hover:text-white transition-colors"
+                  title="Get in touch with ELSA Albania"
+                >
+                  Contact Form
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/projects" 
+                  className="text-gray-300 hover:text-white transition-colors"
+                  title="Explore ELSA Albania's Projects and Initiatives"
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/events" 
+                  className="text-gray-300 hover:text-white transition-colors"
+                  title="View upcoming ELSA Albania events"
+                >
+                  Events
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/membership" 
+                  className="text-gray-300 hover:text-white transition-colors"
+                  title="Learn how to join ELSA Albania"
+                >
+                  Become a Member
+                </a>
+              </li>
+            </ul>
+          </nav>
 
           {/* Vision Section */}
-          <div className="lg:col-span-1 flex flex-col items-center">
+          <section className="lg:col-span-1 flex flex-col items-center">
             <h3 className="text-base font-bold mb-4 uppercase tracking-wide">Our Vision</h3>
             <p className="text-gray-300 leading-relaxed text-sm text-center">
               A fair world in which there is respect for human dignity and cultural diversity.
             </p>
-          </div>
-        </div>
+          </section>
+        </section>
 
         {/* Follow Us Section */}
-        <div className="lg:col-span-1 flex flex-col items-center mt-12">
-          <h3 className="text-base font-bold mb-4 uppercase tracking-wide">Follow Us</h3>
-          <div className="flex space-x-4">
+        <section className="lg:col-span-1 flex flex-col items-center mt-12">
+          <h3 className="text-base font-bold mb-4 uppercase tracking-wide" id="social-links">Follow Us</h3>
+          <nav aria-labelledby="social-links" className="flex space-x-4">
             <a 
               href="https://www.facebook.com/elsaalbania" 
               target="_blank"
@@ -161,17 +204,29 @@ const Footer = () => {
             >
               <Linkedin className="w-5 h-5" />
             </a>
-          </div>
-        </div>
+          </nav>
+        </section>
 
         {/* Bottom Copyright */}
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="text-center text-gray-400 text-sm">
             <p>© {new Date().getFullYear()} ELSA Albania. All rights reserved.</p>
             <div className="mt-2 space-x-4">
-              <a href="/privacy" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
+              <a 
+                href="/privacy" 
+                className="hover:text-orange-400 transition-colors"
+                title="ELSA Albania's Privacy Policy"
+              >
+                Privacy Policy
+              </a>
               <span>•</span>
-              <a href="/terms" className="hover:text-orange-400 transition-colors">Terms of Use</a>
+              <a 
+                href="/terms" 
+                className="hover:text-orange-400 transition-colors"
+                title="ELSA Albania's Terms of Use"
+              >
+                Terms of Use
+              </a>
             </div>
           </div>
         </div>
@@ -195,6 +250,43 @@ const Footer = () => {
           />
         </svg>
       </button>
+
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ELSA Albania",
+            "description": "The European Law Students' Association in Albania is a non-political, independent, non-profit organization run by and for law students and young lawyers.",
+            "url": "https://www.al.elsa.org",
+            "logo": "https://www.al.elsa.org/logo.png",
+            "foundingDate": "1995-03-15",
+            "keywords": "law students, legal education, ELSA, European Law Students Association, Albania",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": t.phone,
+              "email": "president@al.elsa.org",
+              "contactType": "Customer Service",
+              "availableLanguage": ["Albanian", "English"]
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": t.street,
+              "addressLocality": "Tirana",
+              "addressRegion": "Tirana",
+              "postalCode": "1001",
+              "addressCountry": "AL"
+            },
+            "sameAs": [
+              "https://www.facebook.com/elsaalbania",
+              "https://www.instagram.com/elsa_albania",
+              "https://www.linkedin.com/company/elsa-albania"
+            ]
+          })
+        }}
+      />
     </footer>
   );
 };

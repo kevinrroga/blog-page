@@ -116,8 +116,13 @@ const Header = () => {
                   <a 
                     href="https://elsa.org/" 
                     target="_blank" 
-                    rel="noopener noreferrer" 
+                    rel="external noopener noreferrer" 
+                    title="Visit ELSA International's official website" 
                     className="block px-4 py-2 hover:bg-slate-700"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open('https://elsa.org/', '_blank', 'noopener,noreferrer');
+                    }}
                   >
                     {t.ElsaInternational}
                   </a>
@@ -126,6 +131,9 @@ const Header = () => {
                   </Link>
                   <Link to="/board" className="block px-4 py-2 hover:bg-slate-700">
                     {t.NationalBoard}
+                  </Link>
+                  <Link to="/team" className="block px-4 py-2 hover:bg-slate-700">
+                    {t.aboutTeam}
                   </Link>
                 </div>
               )}
@@ -265,6 +273,9 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
+                    <Link to="/team" className="block px-3 py-2 rounded hover:bg-slate-700">
+                      {t.aboutTeam}
+                    </Link>
                   </li>
                 </ul>
               )}

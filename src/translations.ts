@@ -23,10 +23,10 @@ export const translations = {
     // heroGlobal: 'GLOBAL.',
     heroDescription: 'ELSA Albania brings together law students and young legal professionals from across the country. As part of the world’s largest association of law students, they have the chance to connect and collaborate on multiple levels—at their universities, across Albania and throughout Europe. Guided by values of cultural exchange and social responsibility, ELSA Albania empowers its members to grow both personally and professionally while contributing to a more just and open society.',
     // Philosophy Section
-    missionTitle: 'THE PHILOSOPHY\nSTATEMENT OF LSA',
+    missionTitle: 'THE PHILOSOPHY\nSTATEMENT OF ELSA',
     sinceMarch: 'SINCE MARCH 15TH, 1995',
     missionQuote: 'A fair world in which there is respect for human dignity and cultural diversity.',
-    missionDescription: 'ELSA opens doors to opportunities that extend well beyond the university classroom. By aligning itself on academic, professional, and international levels, the association offers its members a unique platform to grow both personally and professionally. Academically, ELSA enriches legal education by exploring subjects that complement the university curriculum. Through events, discussions, and publications, members gain perspectives that bridge the gap between theory and real-world application. This academic focus is paired with professional development, offering direct insights into the daily work of legal practitioners and helping students prepare for their future careers. the same time, ELSA thrives on international exchange. By connecting law students and young lawyers across Europe, it fosters dialogue between cultures and legal systems, creating an environment where members can broaden their horizons and deepen their understanding of comparative law. Through this combination, ELSA enables its members to gain valuable international and practical experience, while also cultivating soft skills that are essential for both studies and future professional life. Beyond knowledge and skills, ELSA helps students build lasting networks – from mentors and peers during their studies to potential employers and colleagues in the years ahead.', 
+    missionDescription: 'ELSA opens doors to opportunities that extend well beyond the university classroom. By aligning itself on academic, professional, and international levels, the association offers its members a unique platform to grow both personally and professionally. Academically, ELSA enriches legal education by exploring subjects that complement the university curriculum. Through events, discussions, and publications, members gain perspectives that bridge the gap between theory and real-world application. This academic focus is paired with professional development, offering direct insights into the daily work of legal practitioners and helping students prepare for their future careers. the same time, ELSA thrives on international exchange. By connecting law students and young lawyers across Europe, it fosters dialogue between cultures and legal systems, creating an environment where members can broaden their horizons and deepen their understanding of comparative law. Through this combination, ELSA enables its members to gain valuable international and practical experience, while also cultivating soft skills that are essential for both studies and future professional life. Beyond knowledge and skills, ELSA helps students build lasting networks – from mentors and peers during their studies to potential employers and colleagues in the years ahead.',
     // Footer
     contact: 'Contact',
     quickLinks: 'Quick Links',
@@ -55,10 +55,21 @@ export const translations = {
     aboutTeam: 'Our Team',
     aboutPartners: 'Partners',
     ElsaInternational: "ELSA International",
-    ElsaAlbania: "Elsa Albania",
+    ElsaAlbania: "ELSA Albania",
     NationalBoard: "National Board",
     boardTitle: "National Board",
     boardDescription: "Meet the dedicated members of the ELSA Albania National Board.",
+
+    // New Team Page translations
+    teamTitle: "Our Team",
+    teamDescription: "Meet the dedicated people behind ELSA Albania who work tirelessly to support our mission.",
+    boardMembers: "Board Members",
+    coordinators: "Coordinators",
+    directors: "Directors",
+    assistants: "Assistants",
+    boardRelations: "Board Management, External Relations and Expansion",
+    internalManagement: "Internal Management",
+    marketing: "Marketing",
 
     // Academic Activities Section
     academicActivitiesIntro: 'Explore our academic initiatives designed to enhance legal education and promote critical thinking among law students.',
@@ -128,7 +139,7 @@ export const translations = {
     seminarsConferences: 'Seminare & Konferenca',
     valuesTitle: "Vlerat Tona",
     valuesText: "Ne vlerësojmë integritetin, profesionalizmin dhe bashkëpunimin.",
-    
+
     networkTitle: 'Rrjeti Ndërkombëtar i Studentëve të Drejtësisë',
     location: 'SHQIPËRI',
     purposeTitle: "Qëllimi Ynë", // <-- Added property
@@ -151,6 +162,7 @@ export const translations = {
     city: '1001 Tiranë',
     phone: '+355 69 964 8754',
     email: 'president@al.elsa.org',
+    marketing: "Marketing",
 
     // Gallery Stats
     legalConference: 'Konferencë juridike',
@@ -165,6 +177,7 @@ export const translations = {
     eventsDescription: 'Çdo vit në Evropë.',
     chaptersTitle: 'Degë Lokale',
     chaptersDescription: 'Aktive në gjithë Gjermaninë.',
+    internalManagement: "Menaxhimi i Brendshëm",
 
     // About Section
     ElsaInternational: 'Elsa Ndërkombëtare',
@@ -174,8 +187,16 @@ export const translations = {
     aboutTeam: 'Ekipi Ynë',
     aboutPartners: 'Partnerët',
     boardTitle: "Bordi Kombëtar",
+    boardRelations: "Menaxhimi i Bordit, Marrëdhëniet e Jashtme dhe Zgjerimi",
     boardDescription: "Njihuni me anëtarët e përkushtuar të Bordit Kombëtar të ELSA Shqipëria.",
 
+    // New Team Page translations
+    teamTitle: "Ekipi Ynë",
+    teamDescription: "Njihuni me njerëzit e përkushtuar pas ELSA Shqipëri që punojnë pa u lodhur për të mbështetur misionin tonë.",
+    boardMembers: "Anëtarët e Bordit",
+    coordinators: "Koordinatorët",
+    directors: "Drejtorët",
+    assistants: "Asistentët",
     // Academic Activities Section
     academicActivitiesIntro: 'Eksploroni iniciativat tona akademike të krijuara për të përmirësuar edukimin ligjor dhe për të promovuar mendimin kritik midis studentëve të drejtësisë.',
     ahrcTitle: 'Fushata Vjetore e të Drejtave të Njeriut',

@@ -107,7 +107,7 @@ const GalleryStats = () => {
     },
     {
       logo: '../assets/lawfirm.jpg',
-      name: 'Partner Organization 4',
+      name: 'K Law Firm',
 
     },
   ];
