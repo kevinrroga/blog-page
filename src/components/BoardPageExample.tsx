@@ -2,12 +2,12 @@
 
 import SEO from './SEO';
 import PageTransition from './PageTransition';
-import { useLanguage } from '../contexts/LanguageContext';
-import { translations } from '../translations';
+// import { useLanguage } from '../contexts/LanguageContext';
+// import { translations } from '../translations';
 
 const BoardPageExample = () => {
-  const { language } = useLanguage();
-  const t = translations[language];
+  // const { language } = useLanguage();
+  // const t = translations[language];
 
   return (
     <PageTransition>

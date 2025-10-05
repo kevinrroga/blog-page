@@ -12,7 +12,7 @@ import tImage from '../../assets/t.jpg';
 import aImage from '../../assets/a.jpg';
 import mpImage from '../../assets/mp.jpg';
 import mgImage from '../../assets/mg.jpg';
-import boardPhoto from '../../assets/board-group-photo.jpg';
+// import boardPhoto from '../../assets/board-group-photo.jpg';
 
 // Board members dataoto
 const boardMembers = [

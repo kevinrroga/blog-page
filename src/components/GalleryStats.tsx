@@ -19,7 +19,7 @@ import halimiImg from '@assets/halimi.jpeg';
 import europianiImg from '@assets/europiani.jpg';
 import epokaImg from '@assets/epoka university.jpg';
 import komitetihelsinikitImg from '@assets/komitetihelsinkit.jpeg';
-import ndiImg from '@assets/ndi.jpeg';
+// import ndiImg from '@assets/ndi.jpeg';
 import ministriadrejtesiseImg from '@assets/ministriadrejtesise.jpg';
 import osceImg from '@assets/osce.jpeg';
 import vcsImg from '@assets/vcs.jpg';

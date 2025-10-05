@@ -17,7 +17,7 @@ import heldiImage from '@assets/heldi_kodra.jpg';
 import emaImage from '@assets/ema_dako.jpg';
 import placeholderImage from '@assets/elsa-logo-white.png'; // Using logo as placeholder since profile-placeholder.jpg might not exist
 // Add halimi.jpeg import
-import halimiImage from '@assets/halimi.jpeg';
+// import halimiImage from '@assets/halimi.jpeg';
 
 const TeamPage = () => {
   const { language } = useLanguage();
