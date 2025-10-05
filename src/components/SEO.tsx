@@ -29,6 +29,12 @@ const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       
+      {/* Updated Content Security Policy */}
+      <meta 
+        http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; font-src 'self'; form-action 'self';" 
+      />
+      
       {/* Open Graph Tags */}
       <meta property="og:site_name" content="ELSA Albania" />
       <meta property="og:type" content={type} />

@@ -2,6 +2,15 @@ import { motion, easeOut } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 
+// Import alumni images from root-level assets folder
+import dhimiterImage from '@assets/dhimiter.jpg';
+import sofjanImage from '@assets/sofjan.jpg';
+import glenImage from '@assets/glen.jpg';
+import gladiolaImage from '@assets/gladiola.jpg';
+import boraImage from '@assets/bora.png';
+import fionaImage from '@assets/fiona.png';
+import elsaLogoWhite from '@assets/elsa-logo-white.png'; // Fallback image
+
 const Alumni = () => {
   const { language } = useLanguage();
   const t = translations[language];
@@ -37,42 +46,42 @@ const Alumni = () => {
     {
       name: 'Dhimitër Zguro',
       position: 'Associate - Halimi Law & Tax',
-      photo: '/assets/dhimiter.jpg',
+      photo: dhimiterImage,
       currentRole: '',
       linkedinUrl: 'https://halimi.al/en/avokatet/dhimiter-zguro/' // Add LinkedIn URLs
     },
     {
       name: 'Sofjan Jaupaj',
       position: 'Minister of Environment of the Republic of Albania',
-      photo: '/assets/sofjan.jpg',
+      photo: sofjanImage,
       currentRole: '',
       linkedinUrl: 'https://en.wikipedia.org/wiki/Sofjan_Jaupaj'
     },
     {
       name: 'Glen Mebelli Bardhi',
       position: 'Advisor to the Speaker of the Parliament and Chevening Scholar',
-      photo: '/assets/glen.jpg',
+      photo: glenImage,
       currentRole: '',
       linkedinUrl: 'https://www.linkedin.com/in/glenmebellibardhi/'
     },
     {
       name: 'Gladiola Ago',
       position: 'Senior Associate - Boga & Associates',
-      photo: '/assets/gladiola.jpg',
+      photo: gladiolaImage,
       currentRole: '',
       linkedinUrl: 'https://www.linkedin.com/in/gladiola-ago/'
     },
     {
       name: 'Bora Kola',
       position: 'National Legal Expert - OSCE Presence in Albania',
-      photo: '/assets/bora.png',
+      photo: boraImage,
       currentRole: '',
       linkedinUrl: 'https://www.linkedin.com/in/bora-kola/'
     },
     {
       name: 'Fiona Kamberi',
       position: 'Associate - Frost & Fire Consulting',
-      photo: '/assets/fiona.png',
+      photo: fionaImage,
       currentRole: '',
       linkedinUrl: 'https://www.linkedin.com/in/fiona-kamberi/'
     }
@@ -83,7 +92,8 @@ const Alumni = () => {
       {/* Hero Section */}
       <section className="relative bg-slate-900 text-white py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('/assets/pattern.svg')] bg-repeat bg-center"></div>
+          {/* Using a simple gradient instead of missing SVG pattern */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-indigo-900"></div>
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
@@ -132,6 +142,10 @@ const Alumni = () => {
                       src={member.photo}
                       alt={member.name}
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        // Fallback if image fails to load
+                        (e.target as HTMLImageElement).src = elsaLogoWhite;
+                      }}
                     />
                     {/* LinkedIn overlay on hover */}
                     <div className="absolute inset-0 bg-blue-800/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">

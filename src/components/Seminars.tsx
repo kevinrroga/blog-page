@@ -2,11 +2,17 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 import { motion } from 'framer-motion';
 
+// Import images
+import selsImg from '@assets/sels.jpg';
+import welsImg from '@assets/wels.jpg';
+import delegationsImg from '@assets/delegations.jpg';
+import iceImg from '@assets/ice.jpg';
+
 interface Program {
   title: string;
   description: string;
-  logo: string;
-  secondaryLogo?: string; // Made optional
+  logo: string | '';
+  secondaryLogo?: string | ''; // Made optional
 }
 
 const SeminarsConferences = () => {
@@ -17,18 +23,18 @@ const SeminarsConferences = () => {
     {
       title: t.lawSchoolsTitle,
       description: t.lawSchoolsDescription,
-      logo: '../assets/sels.jpg',
-      secondaryLogo: '../assets/wels.jpg' // Added second logo
+      logo: selsImg,
+      secondaryLogo: welsImg // Added second logo
     },
     {
       title: t.delegationsTitle,
       description: t.delegationsDescription,
-      logo: '../assets/delegations.jpg'
+      logo: delegationsImg
     },
     {
       title: t.iceTitle,
       description: t.iceDescription,
-      logo: '../assets/ice.jpg'
+      logo: iceImg
     },
     {
       title: t.instutionalVisitsTitle,

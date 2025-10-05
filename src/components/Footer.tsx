@@ -152,7 +152,7 @@ const Footer = () => {
                   Events
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a 
                   href="/membership" 
                   className="text-gray-300 hover:text-white transition-colors"
@@ -160,7 +160,7 @@ const Footer = () => {
                 >
                   Become a Member
                 </a>
-              </li>
+              </li> */}
             </ul>
           </nav>
 

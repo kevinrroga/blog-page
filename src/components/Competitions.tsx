@@ -1,6 +1,11 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 
+// Import images
+import helgaImg from '@assets/helga.jpg';
+import johnImg from '@assets/john.jpg';
+import encImg from '@assets/enc.jpg';
+
 const Competitions = () => {
   const { language } = useLanguage();
   const t = translations[language];
@@ -9,17 +14,17 @@ const Competitions = () => {
     {
       title: t.helgaPedersenTitle,
       description: t.helgaPedersenDescription,
-      logo: '../assets/helga.jpg'
+      logo: helgaImg
     },
     {
       title: t.johnJacksonTitle,
       description: t.johnJacksonDescription,
-      logo: '../assets/john.jpg'
+      logo: johnImg
     },
     {
       title: t.encTitle,
       description: t.encDescription,
-      logo: '../assets/enc.jpg'
+      logo: encImg
     },
     {
       title: t.mootCourtTitle,

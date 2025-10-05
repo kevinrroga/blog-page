@@ -10,12 +10,14 @@ const GalleryImage = ({ src, alt }: GalleryImageProps) => {
 
   return (
     <div 
-      className={`
+      className="
         relative transition-all rounded-lg overflow-hidden duration-500
-        h-[250px] md:h-[400px] w-full md:w-56
-        group hover:md:w-full
+        h-[250px] md:h-[400px] flex-shrink
+        w-24 sm:w-32 md:w-56
+        hover:w-full
         hover:z-10
-      `}
+        group
+      "
     >
       <img 
         src={src} 

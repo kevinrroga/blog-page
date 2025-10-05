@@ -4,29 +4,53 @@ import { useEffect } from 'react';
 import GalleryImage from './GalleryImage';
 import { motion } from 'framer-motion';
 
+// Import gallery images
+import imazh1 from '@assets/imazh1.jpeg';
+import imazh2 from '@assets/imazh2.jpeg';
+import imazh3 from '@assets/imazh3.jpeg';
+import imazh4 from '@assets/imazh4.jpeg';
+import imazh5 from '@assets/imazh5.jpeg';
+
+// Import partner logos
+import frostfireImg from '@assets/frostfire.jpeg';
+import lrgImg from '@assets/lrg.jpg';
+import fdutImg from '@assets/fdut.jpeg';
+import halimiImg from '@assets/halimi.jpeg';
+import europianiImg from '@assets/europiani.jpg';
+import epokaImg from '@assets/epoka university.jpg';
+import komitetihelsinikitImg from '@assets/komitetihelsinkit.jpeg';
+import ndiImg from '@assets/ndi.jpeg';
+import ministriadrejtesiseImg from '@assets/ministriadrejtesise.jpg';
+import osceImg from '@assets/osce.jpeg';
+import vcsImg from '@assets/vcs.jpg';
+import rycoImg from '@assets/ryco.jpg';
+import bbaImg from '@assets/bba.jpeg';
+import qqImg from '@assets/qq.jpg';
+import lawfirmImg from '@assets/lawfirm.jpg';
+
 const GalleryStats = () => {
   const { language } = useLanguage();
   const t = translations[language];
 
   const images = [
     {
-      src: '/assets/imazh1.jpeg',
+      src: imazh1,
       alt: t.legalConference,
     },
     {
-      src: '/assets/imazh2.jpeg',
+      src: imazh2,
       alt: t.modernCourthouse,
     },
     {
-      src: '/assets/imazh3.jpeg',
+      src: imazh3,
       alt: t.legalAssembly,
     },
     {
-      src: '/assets/imazh4.jpeg',
+      src: imazh4,
       alt: t.academicGathering,
     },
     {
-      src: '/assets/imazh5.jpeg',
+      src: imazh5,
       alt: t.legalAssembly,
     },
   ];
@@ -41,72 +65,72 @@ const GalleryStats = () => {
 
   const partners = [
     {
-      logo: '../assets/frostfire.jpeg', // Move to public/images if not already there
+      logo: frostfireImg,
       name: 'Frost & Fire',
     },
     {
-      logo: '../assets/lrg.jpg', // Move to public/images if not already there
+      logo: lrgImg,
       name: 'Partner Organization 2',
     },
     {
-      logo: '../assets/fdut.jpeg',
+      logo: fdutImg,
       name: 'Fakulteti i Drejtësisë',
     },
     {
-      logo: '../assets/halimi.jpeg',
+      logo: halimiImg,
       name: 'Halimi Law & Tax',
     },
     {
-      logo: '../assets/europiani.jpg',
+      logo: europianiImg,
       name: 'Universiteti Europian i Tiranes',
     },
     {
-      logo: '../assets/epoka university.jpg',
+      logo: epokaImg,
       name: 'Epoka University',
 
     },
     {
-      logo: '../assets/komitetihelsinkit.jpeg',
+      logo: komitetihelsinikitImg,
       name: 'Komiteti Shqiptar i Helsinkit',
 
     },
-    {
-      logo: '../assets/ndi.jpeg',
-      name: 'NDI',
+    // {
+    //   logo: ndiImg,
+    //   name: 'NDI',
 
-    },
+    // },
     {
-      logo: '../assets/ministriadrejtesise.jpg',
+      logo: ministriadrejtesiseImg,
       name: 'Ministria e Drejtësisë',
 
     },
     {
-      logo: '../assets/osce.jpeg',
+      logo: osceImg,
       name: 'OSCE',
 
     },
     {
-      logo: '../assets/vcs.jpg',
+      logo: vcsImg,
       name: 'CleanScore',
 
     },
     {
-      logo: '../assets/ryco.jpg',
+      logo: rycoImg,
       name: 'Regional Youth Cooperation Office',
 
     },
     {
-      logo: '../assets/bba.jpeg',
+      logo: bbaImg,
       name: 'Beyond Barriers Association',
 
     },
     {
-      logo: '../assets/qq.jpg',
+      logo: qqImg,
       name: 'Qëndresa Qytetare',
 
     },
     {
-      logo: '../assets/lawfirm.jpg',
+      logo: lawfirmImg,
       name: 'K Law Firm',
 
     },
@@ -116,7 +140,7 @@ const GalleryStats = () => {
     <section className="bg-slate-900">
       {/* Gallery Section */}
       <div className="max-w-7xl mx-auto px-4 pt-16">
-        <div className="flex items-center gap-2 h-[400px] w-full max-w-5xl mx-auto mb-16">
+        <div className="flex items-center justify-center gap-2 h-[400px] w-full max-w-5xl mx-auto mb-16 overflow-x-auto">
           {images.map((image, index) => (
             <GalleryImage key={index} src={image.src} alt={image.alt} />
           ))}

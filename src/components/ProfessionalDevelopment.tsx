@@ -1,6 +1,10 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 
+// Import images
+import traineeshipImg from '@assets/traineeship.jpg';
+import colorCareerImg from '@assets/color_career.jpg';
+
 const ProfessionalDevelopment = () => {
   const { language } = useLanguage();
   const t = translations[language];
@@ -9,12 +13,12 @@ const ProfessionalDevelopment = () => {
     {
       title: 'ELSA Traineeships',
       description: t.elseTraineeshipDescription, // Use your translation or original text
-      logo: '../assets/traineeship.jpg'
+      logo: traineeshipImg
     },
     {
       title: 'Career Launch',
       description: t.careerLaunchDescription, // Use your translation or original text
-      logo: '../assets/color_career.jpg'
+      logo: colorCareerImg
     },
     {
       title: 'Lawyers at Work',

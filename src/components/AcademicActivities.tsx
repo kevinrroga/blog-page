@@ -1,6 +1,11 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 
+// Import images
+import ahrcImg from '@assets/ahrc.jpg';
+import ruleLawImg from '@assets/rule_law.jpg';
+import lrgImg from '@assets/lrg.jpg';
+
 const AcademicActivities = () => {
   const { language } = useLanguage();
   const t = translations[language];
@@ -9,22 +14,22 @@ const AcademicActivities = () => {
     {
       title: t.ahrcTitle,
       description: t.ahrcDescription,
-      logo: '../assets/ahrc.jpg'
+      logo: ahrcImg
     },
     {
       title: t.roleTitle,
       description: t.roleDescription,
-      logo: '../assets/rule_law.jpg'
+      logo: ruleLawImg
     },
     {
       title: t.lawReviewTitle,
       description: t.lawReviewDescription,
-      logo: '../assets/lrg.jpg'
+      logo: lrgImg
     },
     {
       title: t.lrgTitle,
       description: t.lrgDescription,
-      logo: '../assets/lrg.jpg'
+      logo: lrgImg
     }
   ];
 

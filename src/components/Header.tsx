@@ -64,11 +64,11 @@ const Header = () => {
     setLastClickedState(now);
   }
   return (
-    <header ref={headerRef} className="bg-slate-900 text-white">
+    <header ref={headerRef} className="bg-slate-900 text-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Logo/Title */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 relative z-20">
             <div className="h-10 md:h-12">
               <img
                 src={elsaLogo}
@@ -213,7 +213,7 @@ const Header = () => {
           {/* Mobile hamburger */}
           <button
             type="button"
-            className="md:hidden px-3 py-2 rounded hover:bg-slate-800"
+            className="md:hidden px-3 py-2 rounded hover:bg-slate-800 relative z-20"
             onClick={() => setMobileMenuOpen(v => !v)}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -227,7 +227,7 @@ const Header = () => {
         {mobileMenuOpen && (
           <div
             id="mobile-menu"
-            className="md:hidden mt-3 bg-slate-800 rounded-lg p-2 z-50 relative pointer-events-auto"
+            className="md:hidden mt-3 bg-slate-800 rounded-lg p-2 z-40 relative pointer-events-auto shadow-lg"
           >
             {/* Top-level items */}
             <Link

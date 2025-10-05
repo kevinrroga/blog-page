@@ -3,19 +3,21 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 import { Mail, Linkedin } from 'lucide-react';
 
-// Import all images
-import dinaImage from '../assets/Dina.png';
-import inesImage from '../assets/Ines.png';
-import zImage from '../assets/z.png';
-import zJpg from '../assets/z.jpg';
-import ersianaImage from '../assets/ersiana_korriku.jpg';
-import matildaImage from '../assets/matilda_lleshi.png';
-import lidiaImage from '../assets/lidia_sula.jpg';
-import megiImage from '../assets/megi_zoto.jpg';
-import glenImage from '../assets/glen.jpg';
-import placeholderImage from '../assets/profile-placeholder.jpg';
+// Import all images from root-level assets folder
+import dinaImage from '@assets/Dina.png';
+import inesImage from '@assets/Ines.png';
+import zImage from '@assets/kok.jpg'; // Using j.jpg as a replacement for z.png
+import zJpg from '@assets/kok.jpg'; // Using s.jpg as a replacement for z.jpg
+import ersianaImage from '@assets/ersiana_korriku.jpg';
+import matildaImage from '@assets/matilda_lleshi.jpg';
+import lidiaImage from '@assets/lidia_sula.jpg';
+import megiImage from '@assets/megi_zoto.jpg';
+import glenImage from '@assets/kok.jpg';
+import heldiImage from '@assets/heldi_kodra.jpg';
+import emaImage from '@assets/ema_dako.jpg';
+import placeholderImage from '@assets/elsa-logo-white.png'; // Using logo as placeholder since profile-placeholder.jpg might not exist
 // Add halimi.jpeg import
-import halimiImage from '../assets/halimi.jpeg';
+import halimiImage from '@assets/halimi.jpeg';
 
 const TeamPage = () => {
   const { language } = useLanguage();
@@ -77,7 +79,7 @@ const TeamPage = () => {
         {
           id: 4,
           name: "Etual Hoxha",
-          role: "Academic Activities Coordinator",
+          role: "Assistan for Human Resources",
           photo: zImage,
           email: "aa@al.elsa.org",
           linkedin: "https://linkedin.com/in/klara-hoxha"
@@ -90,7 +92,7 @@ const TeamPage = () => {
         {
           id: 4,
           name: "Ersiana Korriku",
-          role: "Academic Activities Coordinator",
+          role: "Assistant for Academic Activities",
           photo: ersianaImage,
           email: "aa@al.elsa.org",
           linkedin: "https://linkedin.com/in/klara-hoxha"
@@ -98,7 +100,7 @@ const TeamPage = () => {
         {
           id: 5,
           name: "Matilda Lleshi",
-          role: "STEP Coordinator",
+          role: "Assistant for Annual Human Rights Campaign",
           photo: matildaImage,
           email: "step@al.elsa.org",
            linkedin: "https://linkedin.com/in/dritan-berisha"
@@ -106,7 +108,7 @@ const TeamPage = () => {
         {
           id: 5,
           name: "Lidia Sula",
-          role: "STEP Coordinator",
+          role: "Assistant for Law Review and Legal Research Group",
           photo: lidiaImage,
           email: "step@al.elsa.org",
            linkedin: "https://linkedin.com/in/dritan-berisha"
@@ -119,7 +121,7 @@ const TeamPage = () => {
         {
           id: 4,
           name: "Megi Zoto",
-          role: "Academic Activities Coordinator",
+          role: "Director for Moot Courts",
           photo: megiImage,
           email: "aa@al.elsa.org",
           linkedin: "https://linkedin.com/in/klara-hoxha"
@@ -127,15 +129,15 @@ const TeamPage = () => {
          {
            id: 5,
            name: "Ema Dako",
-           role: "STEP Coordinator",
-           photo: zImage,
+           role: "Director for Moot Courts",
+           photo: emaImage,
            email: "step@al.elsa.org",
            linkedin: "https://linkedin.com/in/dritan-berisha"
          },
          {
            id: 5,
            name: "Marinel Prenga",
-           role: "STEP Coordinator",
+           role: "Director for Academic Competitions",
            photo: zJpg,
            email: "step@al.elsa.org",
            linkedin: "https://linkedin.com/in/dritan-berisha"
@@ -148,7 +150,7 @@ const TeamPage = () => {
         {
           id: 6,
           name: "Ariel Muka",
-          role: "IT Director",
+          role: "Director for Professional Development",
           photo: glenImage,
           email: "it@al.elsa.org",
           linkedin: "https://linkedin.com/in/artan-beqiri"
@@ -161,16 +163,16 @@ const TeamPage = () => {
         {
           id: 6,
           name: "Heldi Kodra",
-          role: "IT Director",
-          photo: glenImage,
+          role: "Director for Conferences",
+          photo: heldiImage,
           email: "it@al.elsa.org",
           linkedin: "https://linkedin.com/in/artan-beqiri"
         },
         {
           id: 6,
           name: "Redi Vranici",
-          role: "IT Director",
-          photo: glenImage,
+          role: "Director Law Schools",
+          photo: zImage,
           email: "it@al.elsa.org",
           linkedin: "https://linkedin.com/in/artan-beqiri"
         },
@@ -182,8 +184,9 @@ const TeamPage = () => {
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
       <section className="relative bg-slate-900 text-white py-32 overflow-hidden text-center">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('/assets/pattern.svg')] bg-repeat bg-center"></div>
+        <div className="absolute inset-0 opacity-10">
+          {/* Using a simple gradient instead of missing SVG pattern */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-indigo-900"></div>
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
@@ -244,14 +247,25 @@ const TeamPage = () => {
                   >
                     {/* Photo */}
                     <motion.div 
-                      className="w-52 h-52 rounded-full overflow-hidden mb-6 border-4 border-orange-400 shadow-lg"
+                      className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg"
                       whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
                       <img 
                         src={member.photo} 
                         alt={`${member.name}, ${member.role}`}
                         className="w-full h-full object-cover"
+                        style={
+                          member.photo === dinaImage 
+                            ? { objectPosition: "70% 25%", transform: "scale(1.1)" }
+                            : member.photo === ersianaImage
+                              ? { objectPosition: "center 30%", transform: "scale(1.2)" }
+                              : member.photo === matildaImage
+                                ? { objectPosition: "center 30%", transform: "scale(1.4)" }
+                                : member.photo === megiImage
+                                  ? { objectPosition: "center 30%" }
+                                  : { objectPosition: "center 30%" }
+                        }
                         onError={(e) => {
                           // Fallback if image fails to load
                           (e.target as HTMLImageElement).src = placeholderImage;
@@ -261,10 +275,8 @@ const TeamPage = () => {
                     
                     {/* Details */}
                     <div className="text-center">
-                      <h3 className="text-2xl font-bold text-slate-800">{member.name}</h3>
-                      <p className="text-orange-600 font-medium mt-2 text-lg">{member.role}</p>
-                      
-                      <div className="w-16 h-1 bg-orange-400 mx-auto my-5 rounded-full"></div>
+                      <h3 className="text-xl font-semibold text-slate-800">{member.name}</h3>
+                      <p className="text-orange-600 font-medium mt-1 mb-3">{member.role}</p>
                       
                       {/* Contact Links */}
                       <div className="mt-6 flex items-center justify-center space-x-6">
