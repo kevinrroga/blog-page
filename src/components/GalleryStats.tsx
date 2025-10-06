@@ -27,6 +27,7 @@ import rycoImg from '@assets/ryco.jpg';
 import bbaImg from '@assets/bba.jpeg';
 import qqImg from '@assets/qq.jpg';
 import lawfirmImg from '@assets/lawfirm.jpg';
+import conceilImg from '@assets/conceil_europe.jpg';
 
 const GalleryStats = () => {
   const { language } = useLanguage();
@@ -69,8 +70,8 @@ const GalleryStats = () => {
       name: 'Frost & Fire',
     },
     {
-      logo: lrgImg,
-      name: 'Partner Organization 2',
+      logo: conceilImg,
+      name: 'Council of Europe',
     },
     {
       logo: fdutImg,

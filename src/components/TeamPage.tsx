@@ -4,17 +4,20 @@ import { translations } from '../translations';
 import { Mail, Linkedin } from 'lucide-react';
 
 // Import all images from root-level assets folder
-import dinaImage from '@assets/Dina.png';
-import inesImage from '@assets/Ines.png';
+import dinaImage from '@assets/Dina1.png';
+import inesImage from '@assets/Ines1.png';
 import zImage from '@assets/kok.jpg'; // Using j.jpg as a replacement for z.png
-import zJpg from '@assets/kok.jpg'; // Using s.jpg as a replacement for z.jpg
-import ersianaImage from '@assets/ersiana_korriku.jpg';
-import matildaImage from '@assets/matilda_lleshi.jpg';
+//  // Using s.jpg as a replacement for z.jpg
+import ersianaImage from '@assets/ersiana_korriku1.jpg';
+import matildaImage from '@assets/matilda_lleshi1.jpg';
 import lidiaImage from '@assets/lidia_sula.jpg';
 import megiImage from '@assets/megi_zoto.jpg';
 import glenImage from '@assets/kok.jpg';
 import heldiImage from '@assets/heldi_kodra.jpg';
+import arielImage from '@assets/ariel1.jpg';
 import emaImage from '@assets/ema_dako.jpg';
+import marinelImage from '@assets/marinel_prenga.jpg';
+import etoileImage from '@assets/etoile.jpg';
 import placeholderImage from '@assets/elsa-logo-white.png'; // Using logo as placeholder since profile-placeholder.jpg might not exist
 // Add halimi.jpeg import
 // import halimiImage from '@assets/halimi.jpeg';
@@ -80,7 +83,7 @@ const TeamPage = () => {
           id: 4,
           name: "Etual Hoxha",
           role: "Assistan for Human Resources",
-          photo: zImage,
+          photo: etoileImage,
           email: "aa@al.elsa.org",
           linkedin: "https://linkedin.com/in/klara-hoxha"
         }
@@ -138,7 +141,7 @@ const TeamPage = () => {
            id: 5,
            name: "Marinel Prenga",
            role: "Director for Academic Competitions",
-           photo: zJpg,
+           photo: marinelImage,
            email: "step@al.elsa.org",
            linkedin: "https://linkedin.com/in/dritan-berisha"
          }
@@ -151,7 +154,7 @@ const TeamPage = () => {
           id: 6,
           name: "Ariel Muka",
           role: "Director for Professional Development",
-          photo: glenImage,
+          photo: arielImage,
           email: "it@al.elsa.org",
           linkedin: "https://linkedin.com/in/artan-beqiri"
         },
@@ -257,11 +260,11 @@ const TeamPage = () => {
                         className="w-full h-full object-cover"
                         style={
                           member.photo === dinaImage 
-                            ? { objectPosition: "70% 25%", transform: "scale(1.1)" }
+                            ? { objectPosition: "70% 25%", transform: "scale(1.0)" }
                             : member.photo === ersianaImage
-                              ? { objectPosition: "center 30%", transform: "scale(1.2)" }
+                              ? {  transform: "scale(1.0)" }
                               : member.photo === matildaImage
-                                ? { objectPosition: "center 30%", transform: "scale(1.4)" }
+                                ? { objectPosition: "center 30%", transform: "scale(1.0)" }
                                 : member.photo === megiImage
                                   ? { objectPosition: "center 30%" }
                                   : { objectPosition: "center 30%" }

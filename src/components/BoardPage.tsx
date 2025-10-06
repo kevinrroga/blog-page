@@ -2,6 +2,7 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 import { motion } from 'framer-motion';
+import { Mail } from 'lucide-react'; // Add this import
 import PageTransition from './PageTransition';
 import AnimatedSection from './AnimatedSection';
 import boardGroupPhoto from '../../assets/board-group-photo.jpg'; // Add this import
@@ -14,56 +15,63 @@ import mpImage from '../../assets/mp.jpg';
 import mgImage from '../../assets/mg.jpg';
 // import boardPhoto from '../../assets/board-group-photo.jpg';
 
-// Board members dataoto
+// Board members data
 const boardMembers = [
   {
     name: "Jon Kola",
     position: "President",
     image: jImage,
     bio: "Leading ELSA Albania with passion and dedication.",
-    isMain: true
+    isMain: true,
+    email: "president@al.elsa.org"
   },
   {
     name: "Kostandino Rroga",
     position: "Secretary General",
     image: nImage,
     bio: "Coordinating academic activities and international relations.",
-    isMain: true
+    isMain: true,
+    email: "secgen@al.elsa.org"
   },
   {
     name: "Stivi Meta",
     position: "Vice President in Charge of Marketing",
     image: sImage,
     bio: "",
-    isMain: false
+    isMain: false,
+    email: "marketing@al.elsa.org"
   },
   {
     name: "Martina Gllavaj",
     position: "Vice President in Charge of Academic Activities",
     image: mgImage,
     bio: "",
-    isMain: false
+    isMain: false,
+    email: "academicactivities@al.elsa.org"
   },
   {
     name: "Arba Ollomani",
     position: "Vice President in Charge of Competitions",
     image: aImage,
     bio: "",
-    isMain: false
+    isMain: false,
+    email: "competitions@al.elsa.org"
   },
   {
     name: "Teuta Elezaj",
     position: "Vice President in Charge of Professional Development",
     image: tImage,
     bio: "",
-    isMain: false
+    isMain: false,
+    email: "professionaldevelopment@al.elsa.org"
   },
   {
     name: "Marios Prendi",
     position: "Vice President in Charge of Seminars & Conferences",
     image: mpImage,
     bio: "",
-    isMain: false
+    isMain: false,
+    email: "seminarsconferences@al.elsa.org"
   }
 ];
 
@@ -117,12 +125,12 @@ const BoardPage = () => {
 
           {/* Main Position Cards */}
           <div className="max-w-6xl mx-auto px-6 mb-16">
-            <div className="flex justify-center gap-16"> {/* Changed to flex container */}
+            <div className="flex justify-center gap-16">
               {mainMembers.map((member, index) => (
                 <AnimatedSection key={member.name} delay={index * 0.1}>
                   <div className="text-center">
                     <motion.div 
-                      className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden" 
+                      className="w-56 h-56 mx-auto mb-4 rounded-full overflow-hidden" 
                       whileHover={{ scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
@@ -135,9 +143,27 @@ const BoardPage = () => {
                     <h3 className="text-2xl font-semibold text-white mb-2">
                       {member.name}
                     </h3>
-                    <p className="text-orange-400 font-medium">
+                    <p className="text-orange-400 font-medium mb-3">
                       {member.position}
                     </p>
+                    
+                    {/* Email Display and Button */}
+                    {member.email && (
+                      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-2">
+                        <span className="text-slate-300 text-sm break-all">
+                          {member.email}
+                        </span>
+                        <a 
+                          href={`mailto:${member.email}`}
+                          className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600 
+                                   text-white p-2 rounded-full transition-colors flex-shrink-0"
+                          title={`Email ${member.name}`}
+                          aria-label={`Email ${member.name}`}
+                        >
+                          <Mail size={18} />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </AnimatedSection>
               ))}
@@ -151,7 +177,7 @@ const BoardPage = () => {
                 <AnimatedSection key={member.name} delay={(index + 1) * 0.1}>
                   <div className="text-center">
                     <motion.div 
-                      className="w-40 h-40 mx-auto mb-3 rounded-full overflow-hidden"
+                      className="w-48 h-48 mx-auto mb-3 rounded-full overflow-hidden"
                       whileHover={{ scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
@@ -164,9 +190,27 @@ const BoardPage = () => {
                     <h3 className="text-xl font-semibold text-white mb-1">
                       {member.name}
                     </h3>
-                    <p className="text-orange-400 font-medium">
+                    <p className="text-orange-400 font-medium mb-3">
                       {member.position}
                     </p>
+                    
+                    {/* Email Display and Button */}
+                    {member.email && (
+                      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-2">
+                        <span className="text-slate-300 text-sm break-all">
+                          {member.email}
+                        </span>
+                        <a 
+                          href={`mailto:${member.email}`}
+                          className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600 
+                                   text-white p-2 rounded-full transition-colors flex-shrink-0"
+                          title={`Email ${member.name}`}
+                          aria-label={`Email ${member.name}`}
+                        >
+                          <Mail size={18} />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </AnimatedSection>
               ))}
@@ -180,7 +224,7 @@ const BoardPage = () => {
                 <AnimatedSection key={member.name} delay={(index + 1) * 0.1}>
                   <div className="text-center">
                     <motion.div 
-                      className="w-40 h-40 mx-auto mb-3 rounded-full overflow-hidden"
+                      className="w-48 h-48 mx-auto mb-3 rounded-full overflow-hidden"
                       whileHover={{ scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
@@ -193,9 +237,27 @@ const BoardPage = () => {
                     <h3 className="text-xl font-semibold text-white mb-1">
                       {member.name}
                     </h3>
-                    <p className="text-orange-400 font-medium">
+                    <p className="text-orange-400 font-medium mb-3">
                       {member.position}
                     </p>
+                    
+                    {/* Email Display and Button */}
+                    {member.email && (
+                      <div className="flex items-center justify-center space-x-3">
+                        <span className="text-slate-300 text-sm truncate max-w-[150px]">
+                          {member.email}
+                        </span>
+                        <a 
+                          href={`mailto:${member.email}`}
+                          className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600 
+                                   text-white p-2 rounded-full transition-colors flex-shrink-0"
+                          title={`Email ${member.name}`}
+                          aria-label={`Email ${member.name}`}
+                        >
+                          <Mail size={18} />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </AnimatedSection>
               ))}

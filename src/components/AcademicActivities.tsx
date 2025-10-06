@@ -4,7 +4,8 @@ import { translations } from '../translations';
 // Import images
 import ahrcImg from '@assets/ahrc.jpg';
 import ruleLawImg from '@assets/rule_law.jpg';
-import lrgImg from '@assets/lrg.jpg';
+import elsaLawReviewImg from '@assets/elsa_law_review.jpg';
+import lrgImg from '@assets/lrg1.jpg';
 
 const AcademicActivities = () => {
   const { language } = useLanguage();
@@ -24,7 +25,7 @@ const AcademicActivities = () => {
     {
       title: t.lawReviewTitle,
       description: t.lawReviewDescription,
-      logo: lrgImg
+      logo: elsaLawReviewImg
     },
     {
       title: t.lrgTitle,
