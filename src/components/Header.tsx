@@ -174,6 +174,17 @@ const Header = () => {
               {t.alumni}
             </Link>
 
+            {/* NEW: SAL button (opens external site in a new tab) */}
+            <button
+              type="button"
+              onClick={() => window.open('https://salchicagokent.com/school/albania/', '_blank', 'noopener,noreferrer')}
+              className="px-3 py-2 rounded hover:bg-slate-800"
+              title="SAL - Chicago Kent"
+              aria-label="Open SAL Chicago Kent (external)"
+            >
+              SAL
+            </button>
+
             {/* Language */}
             <div className="flex items-center gap-2" role="group" aria-label="Language selector">
               <button
