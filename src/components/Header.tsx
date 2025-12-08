@@ -9,37 +9,32 @@ const Header = () => {
   const { language, setLanguage } = useLanguage();
   const t = translations[language];
 
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null); // desktop dropdowns
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileOpenSection, setMobileOpenSection] = useState<string | null>(null); // mobile dropdowns
+  const [mobileOpenSection, setMobileOpenSection] = useState<string | null>(null);
   
   const headerRef = useRef<HTMLElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
-  // Close menus on route change
   useEffect(() => {
     setActiveDropdown(null);
     setMobileMenuOpen(false);
     setMobileOpenSection(null);
   }, [location.pathname]);
 
-  // Handle clicks outside the menu to close dropdowns
   useEffect(() => {
     function handleClickOutside(event: Event) {
-      // Close desktop dropdown if clicking outside
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setActiveDropdown(null);
       }
       
-      // Close mobile menu if clicking outside header entirely
       if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
         setMobileMenuOpen(false);
         setMobileOpenSection(null);
       }
     }
     
-    // Add click and touch event listeners
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
     
@@ -49,7 +44,6 @@ const Header = () => {
     };
   }, []);
 
-  // Toggle mobile sections
   const toggleMobileSection = (section: string) => {
     setMobileOpenSection(prevSection => prevSection === section ? null : section);
   };
@@ -57,12 +51,13 @@ const Header = () => {
   function toggleDesktopDropdown(section: string): void {
     setActiveDropdown(prev => prev === section ? null : section);
   }
-  // Track last language button click to prevent rapid toggling
+
   const [lastClicked, setLastClickedState] = useState(0);
 
   function setLastClicked(now: number) {
     setLastClickedState(now);
   }
+
   return (
     <header ref={headerRef} className="bg-slate-900 text-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
@@ -190,7 +185,6 @@ const Header = () => {
               <button
                 type="button"
                 onClick={() => {
-                  // Validate to prevent potential stored XSS if language is somehow manipulated
                   const validLangs = ['en', 'al'];
                   if (!validLangs.includes('en')) {
                     console.error('Invalid language selection attempted');
@@ -208,7 +202,7 @@ const Header = () => {
                 type="button"
                 onClick={() => {
                   const now = Date.now();
-                  if (now - lastClicked < 500) return; // Prevent rapid clicks
+                  if (now - lastClicked < 500) return;
                   setLastClicked(now);
                   setLanguage('al');
                 }}
@@ -335,6 +329,20 @@ const Header = () => {
             <Link to="/alumni" className="block mt-1 px-3 py-2 rounded hover:bg-slate-700">
               {t.alumni}
             </Link>
+
+            {/* NEW: SAL button (Mobile) - Opens external site in a new tab */}
+            <button
+              type="button"
+              onClick={() => {
+                window.open('https://salchicagokent.com/school/albania/', '_blank', 'noopener,noreferrer');
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full text-left mt-1 px-3 py-2 rounded hover:bg-slate-700"
+              title="SAL - Chicago Kent"
+              aria-label="Open SAL Chicago Kent (external)"
+            >
+              SAL
+            </button>
 
             {/* Language */}
             <div className="flex items-center gap-2 mt-2 px-1">
