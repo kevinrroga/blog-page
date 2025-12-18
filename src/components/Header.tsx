@@ -169,16 +169,10 @@ const Header = () => {
               {t.alumni}
             </Link>
 
-            {/* NEW: SAL button (opens external site in a new tab) */}
-            <button
-              type="button"
-              onClick={() => window.open('https://salchicagokent.com/school/albania/', '_blank', 'noopener,noreferrer')}
-              className="px-3 py-2 rounded hover:bg-slate-800"
-              title="SAL - Chicago Kent"
-              aria-label="Open SAL Chicago Kent (external)"
-            >
-              SAL
-            </button>
+            {/* SAL direct link (no dropdown) */}
+            <Link to="/sal/llm" className="px-3 py-2 rounded hover:bg-slate-800">
+              {t.sal}
+            </Link>
 
             {/* Language */}
             <div className="flex items-center gap-2" role="group" aria-label="Language selector">
@@ -330,19 +324,10 @@ const Header = () => {
               {t.alumni}
             </Link>
 
-            {/* NEW: SAL button (Mobile) - Opens external site in a new tab */}
-            <button
-              type="button"
-              onClick={() => {
-                window.open('https://salchicagokent.com/school/albania/', '_blank', 'noopener,noreferrer');
-                setMobileMenuOpen(false);
-              }}
-              className="block w-full text-left mt-1 px-3 py-2 rounded hover:bg-slate-700"
-              title="SAL - Chicago Kent"
-              aria-label="Open SAL Chicago Kent (external)"
-            >
-              SAL
-            </button>
+            {/* SAL direct link (Mobile) */}
+            <Link to="/sal/llm" className="block mt-1 px-3 py-2 rounded hover:bg-slate-700">
+              {t.sal}
+            </Link>
 
             {/* Language */}
             <div className="flex items-center gap-2 mt-2 px-1">

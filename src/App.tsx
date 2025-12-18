@@ -16,6 +16,8 @@ import TeamPage from './components/TeamPage';
 import SEO from './components/SEO';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SALMore from './components/SALMore';
+import SALLLM from './components/SALLLM';
 
 function HomePage() {
   return (
@@ -51,6 +53,8 @@ function App() {
                 <Route path="/seminars-conferences" element={<SeminarsConferences />} />
                 <Route path="/alumni" element={<Alumni />} />
                 <Route path="/team" element={<TeamPage />} />
+                <Route path="/sal/more" element={<SALMore />} />
+                <Route path="/sal/llm" element={<SALLLM />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Route>
             </Routes>
