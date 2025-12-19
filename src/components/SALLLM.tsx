@@ -184,10 +184,10 @@ const SALLLM = () => {
                   </div>
                 </div>
 
-                <div className="mt-6">
+                <div className="mt-6 flex flex-col sm:flex-row gap-3">
                   <a
                     href="mailto:admissions@salchicagokent.com"
-                    className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors mr-3"
+                    className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
                   >
                     Apply via Email
                   </a>
