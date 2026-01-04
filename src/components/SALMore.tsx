@@ -22,7 +22,7 @@ const SALMore = () => {
       <main>
         <HeroSection />
         <PhilosophySection />
-        /* <GalleryStats /> */
+        {/* <GalleryStats />  */}
       </main>
     </PageTransition>
   );
