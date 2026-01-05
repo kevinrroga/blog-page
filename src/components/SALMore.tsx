@@ -17,12 +17,15 @@ const SALMore = () => {
         description="More information about the SAL program (Chicago-Kent) related to ELSA Albania."
         url="https://elsa-albania.org/sal/more"
       />
-
       {/* Reuse Home-like sections to match the home display */}
       <main>
         <HeroSection />
         <PhilosophySection />
+<<<<<<< HEAD
          {*/ <GalleryStats /> */}
+=======
+        {/* <GalleryStats />  */}
+>>>>>>> 955289c7c0107f19e01adb93a23b8c6a58276b92
       </main>
     </PageTransition>
   );
