@@ -148,7 +148,7 @@ const GalleryStats = () => {
         </div>
 
         {/* Enhanced Partners Section */}
-        <div className="pb-16">
+        {/* <div className="pb-16">
           <div className="text-center mb-16">
             <motion.div
               initial={{ width: 0 }}
@@ -157,7 +157,7 @@ const GalleryStats = () => {
               transition={{ duration: 0.8 }}
             />
             <h2 className="text-3xl font-bold text-white">{t.ourPartners}</h2>
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {partners.map((partner, index) => (
