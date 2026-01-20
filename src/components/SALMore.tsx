@@ -21,11 +21,7 @@ const SALMore = () => {
       <main>
         <HeroSection />
         <PhilosophySection />
-<<<<<<< HEAD
-         {*/ <GalleryStats /> */}
-=======
         {/* <GalleryStats />  */}
->>>>>>> 955289c7c0107f19e01adb93a23b8c6a58276b92
       </main>
     </PageTransition>
   );
