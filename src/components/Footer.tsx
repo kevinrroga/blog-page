@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
             <div className="text-xs">
               {/* <div className="font-semibold text-sm mb-1">{t.networkTitle}</div> */}
-              <div className="text-slate-300">{t.location}</div>
+              {/* <div className="text-slate-300">{t.location}</div> */}
             </div>
           </article>
 
