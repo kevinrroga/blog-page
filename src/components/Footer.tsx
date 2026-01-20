@@ -209,26 +209,6 @@ const Footer = () => {
 
         {/* Bottom Copyright */}
         <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="text-center text-gray-400 text-sm">
-            <p>© {new Date().getFullYear()} ELSA Albania. All rights reserved.</p>
-            <div className="mt-2 space-x-4">
-              <a 
-                href="/privacy" 
-                className="hover:text-orange-400 transition-colors"
-                title="ELSA Albania's Privacy Policy"
-              >
-                Privacy Policy
-              </a>
-              <span>•</span>
-              <a 
-                href="/terms" 
-                className="hover:text-orange-400 transition-colors"
-                title="ELSA Albania's Terms of Use"
-              >
-                Terms of Use
-              </a>
-            </div>
-          </div>
         </div>
       </div>
       <button
