@@ -16,7 +16,8 @@ const Footer = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // Add coordinates for ELSA Albania location
+
+
   const location = {
     address: `${t.street}, ${t.city}`,
     coordinates: "41.3275,19.8187" // Coordinates for Faculty of Law, University of Tirana
@@ -56,7 +57,7 @@ const Footer = () => {
               />
             </div>
             <div className="text-xs">
-              <div className="font-semibold text-sm mb-1">{t.networkTitle}</div>
+              {/* <div className="font-semibold text-sm mb-1">{t.networkTitle}</div> */}
               <div className="text-slate-300">{t.location}</div>
             </div>
           </article>
