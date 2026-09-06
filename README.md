@@ -1,64 +1,33 @@
- ELSA Albania Website -> https://elsa-albania.org/
+<img width="947" height="493" alt="Screenshot 2026-08-29 174309" src="https://github.com/user-attachments/assets/29cc6c26-c5ec-4093-9158-30b9e555b664" />
+# ELSA Albania
 
+Official website for the European Law Students' Association (ELSA) Albania, 
+the world's largest independent law students' association.
 
-## What is this?
+**Live site:** [elsa-albania.org](https://elsa-albania.org/)
 
-This is the official website for the European Law Students' Association (ELSA) in Albania. ELSA is the world's largest independent law students' association, providing opportunities for international exchange, legal education, and professional development.
+## Features
 
-The website showcases:
-- ELSA Albania's mission and activities
-- Board members and their roles
-- Academic and professional development events
+- Board members, events, and alumni network sections
 - Photo gallery of past events
-- Alumni network
 - Bilingual support (English and Albanian)
+- Smooth animations with Framer Motion
 
-## How to run this website locally
+## Built with
 
-### Requirements
-- Node.js (v14 or newer)
-- npm or yarn package manager
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Router
 
-### Quick start
+## Run locally
 
-1. Clone the repository
-   ```bash
-   git clone https://github.com/kevinrroga/elsa-albania.git
-   cd elsa-albania
-   ```
-
-2. Install dependencies
-   ```bash
-   npm install
-   # or
-   yarn
-   ```
-
-3. Start development server
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. Open your browser and go to:
-   http://localhost:5173
-
-### Building for production
 ```bash
-npm run build
-# or
-yarn build
+git clone https://github.com/kevinrroga/elsa-albania-website.git
+cd elsa-albania-website
+npm install
+npm run dev
 ```
 
-The build files will be in the `dist/` folder.
-
-## Technologies used
-- React with TypeScript
-- Tailwind CSS for styling
-- Framer Motion for animations
-- React Router for navigation
-- Vite as the build tool
-
-## License
-© 2025 European Law Students' Association (ELSA) Albania. All rights reserved.
+Open http://localhost:5173 in your browser.
