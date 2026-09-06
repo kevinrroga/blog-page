@@ -7,6 +7,7 @@ import PageTransition from './PageTransition';
 import AnimatedSection from './AnimatedSection';
 import mpImage from '../../assets/mp.jpg';
 import mgImage from '../../assets/mg.jpg';
+import dinaImage from '../../assets/Dina1.png';
 
 // Board members data
 const boardMembers = [
@@ -21,7 +22,7 @@ const boardMembers = [
   {
     name: "Dina Shapo",
     position: "Secretary General",
-    image: null,
+    image: dinaImage,
     bio: "Coordinating academic activities and international relations.",
     isMain: true,
     email: "secgen@al.elsa.org"
@@ -109,7 +110,10 @@ const BoardPage = () => {
                         <img
                           src={member.image}
                           alt={member.name}
-                          className="w-full h-full object-cover object-center"
+                          className="w-full h-full object-cover"
+                          style={member.image === dinaImage
+                            ? { objectPosition: "70% 25%" }
+                            : { objectPosition: "center" }}
                         />
                       </motion.div>
                     )}
