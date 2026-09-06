@@ -13,6 +13,8 @@ import imazh5 from '@assets/imazh5.jpeg';
 
 // Import partner logos
 import frostfireImg from '@assets/frostfire.jpeg';
+import crpartnersImg from '@assets/crpartners.png';
+import collegeofeuropeImg from '@assets/collegeofeurope.png';
 import lrgImg from '@assets/lrg.jpg';
 import fdutImg from '@assets/fdut.jpeg';
 import halimiImg from '@assets/halimi.jpeg';
@@ -68,6 +70,14 @@ const GalleryStats = () => {
     {
       logo: frostfireImg,
       name: 'Frost & Fire',
+    },
+    {
+      logo: crpartnersImg,
+      name: 'CR Partners',
+    },
+    {
+      logo: collegeofeuropeImg,
+      name: 'College of Europe - Tirana Campus',
     },
     {
       logo: conceilImg,
@@ -176,7 +186,7 @@ const GalleryStats = () => {
                   />
                 </div>
 
-                <h3 className="text-orange-400 font-medium mb-1">
+                <h3 className="text-orange-400 font-medium mb-1 text-center w-40 break-words">
                   {partner.name}
                 </h3>
                 <p className="text-sm text-slate-300 text-center">
