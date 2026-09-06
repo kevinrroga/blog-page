@@ -3,6 +3,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 
 // Import alumni images from root-level assets folder
+import jonKolaImage from '@assets/jon-kola.jpeg';
+import kostandinoImage from '@assets/kostandino-rroga.jpeg';
 import dhimiterImage from '@assets/dhimiter.jpg';
 import sofjanImage from '@assets/sofjan.jpg';
 import glenImage from '@assets/glen.jpg';
@@ -44,11 +46,18 @@ const Alumni = () => {
 
   const alumni = [
     {
-      name: 'Dhimitër Zguro',
-      position: 'Associate - Halimi Law & Tax',
-      photo: dhimiterImage,
+      name: 'Jon Kola',
+      position: 'Legal Advisor – Cabinet of the Minister of Environment of the Republic of Albania',
+      photo: jonKolaImage,
+      currentRole: 'Legal Counsel – JZK Collective',
+      linkedinUrl: ''
+    },
+    {
+      name: 'Kostandino Rroga',
+      position: 'Legal Associate – Logu Law',
+      photo: kostandinoImage,
       currentRole: '',
-      linkedinUrl: 'https://halimi.al/en/avokatet/dhimiter-zguro/' // Add LinkedIn URLs
+      linkedinUrl: ''
     },
     {
       name: 'Sofjan Jaupaj',
@@ -56,6 +65,13 @@ const Alumni = () => {
       photo: sofjanImage,
       currentRole: '',
       linkedinUrl: 'https://en.wikipedia.org/wiki/Sofjan_Jaupaj'
+    },
+    {
+      name: 'Dhimitër Zguro',
+      position: 'Associate - Halimi Law & Tax',
+      photo: dhimiterImage,
+      currentRole: '',
+      linkedinUrl: 'https://halimi.al/en/avokatet/dhimiter-zguro/' // Add LinkedIn URLs
     },
     {
       name: 'Glen Mebelli Bardhi',
@@ -126,14 +142,14 @@ const Alumni = () => {
                 variants={cardVariants}
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
               >
-                {/* Photo with fade-in and scale effect - now wrapped with LinkedIn link */}
-                <a 
-                  href={member.linkedinUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                {/* Photo with fade-in and scale effect - links to LinkedIn when available */}
+                <a
+                  href={member.linkedinUrl || undefined}
+                  target={member.linkedinUrl ? '_blank' : undefined}
+                  rel={member.linkedinUrl ? 'noopener noreferrer' : undefined}
                   className="block"
                 >
-                  <motion.div 
+                  <motion.div
                     className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden group relative"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
@@ -148,24 +164,30 @@ const Alumni = () => {
                       }}
                     />
                     {/* LinkedIn overlay on hover */}
-                    <div className="absolute inset-0 bg-blue-800/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#FFFFFF">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                      </svg>
-                    </div>
+                    {member.linkedinUrl && (
+                      <div className="absolute inset-0 bg-blue-800/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#FFFFFF">
+                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                      </div>
+                    )}
                   </motion.div>
                 </a>
 
-                {/* Name now wrapped in LinkedIn link */}
+                {/* Name, wrapped in LinkedIn link when available */}
                 <h3 className="text-xl font-semibold text-center text-slate-900 mb-2">
-                  <a 
-                    href={member.linkedinUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-700 transition-colors"
-                  >
-                    {member.name}
-                  </a>
+                  {member.linkedinUrl ? (
+                    <a
+                      href={member.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-700 transition-colors"
+                    >
+                      {member.name}
+                    </a>
+                  ) : (
+                    member.name
+                  )}
                 </h3>
 
                 <div className="w-16 h-1 bg-orange-400 mx-auto mb-4"></div>

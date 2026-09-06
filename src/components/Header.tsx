@@ -130,6 +130,9 @@ const Header = () => {
                   <Link to="/team" className="block px-4 py-2 hover:bg-slate-700">
                     {t.aboutTeam}
                   </Link>
+                  <Link to="/former-officers" className="block px-4 py-2 hover:bg-slate-700">
+                    {t.formerOfficers}
+                  </Link>
                 </div>
               )}
             </div>
@@ -168,6 +171,42 @@ const Header = () => {
             <Link to="/alumni" className="px-3 py-2 rounded hover:bg-slate-800">
               {t.alumni}
             </Link>
+
+            {/* Law Review (hover dropdown) */}
+            <div
+              className="relative"
+              onMouseEnter={() => setActiveDropdown('lawreview')}
+              onMouseLeave={() =>
+                setActiveDropdown(prev => (prev === 'lawreview' ? null : prev))
+              }
+            >
+              <button
+                type="button"
+                onClick={() => toggleDesktopDropdown('lawreview')}
+                className="px-3 py-2 rounded hover:bg-slate-800 flex items-center gap-1"
+                aria-expanded={activeDropdown === 'lawreview'}
+                aria-label="Law Review dropdown"
+              >
+                {t.lawReview}
+                <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+              {activeDropdown === 'lawreview' && (
+                <div className="absolute left-0 top-full pt-2 z-50">
+                  <div className="w-40 bg-slate-800 rounded-md shadow-lg py-2">
+                    <a
+                      href="/law-review-2026.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-2 hover:bg-slate-700"
+                    >
+                      2026
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* SAL direct link (no dropdown) */}
             <Link to="/sal/llm" className="px-3 py-2 rounded hover:bg-slate-800">
@@ -276,6 +315,11 @@ const Header = () => {
                       {t.aboutTeam}
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/former-officers" className="block px-3 py-2 rounded hover:bg-slate-700">
+                      {t.formerOfficers}
+                    </Link>
+                  </li>
                 </ul>
               )}
             </div>
@@ -323,6 +367,35 @@ const Header = () => {
             <Link to="/alumni" className="block mt-1 px-3 py-2 rounded hover:bg-slate-700">
               {t.alumni}
             </Link>
+
+            {/* Law Review (collapsible) */}
+            <div className="mt-1">
+              <button
+                type="button"
+                className="w-full text-left px-3 py-2 rounded hover:bg-slate-700 flex items-center justify-between"
+                onClick={() => toggleMobileSection('lawreview')}
+                aria-expanded={mobileOpenSection === 'lawreview'}
+                aria-controls="lawreview-submenu"
+                aria-label="Law Review submenu"
+              >
+                {t.lawReview}
+                <ChevronDown className={`w-3.5 h-3.5 ml-1 transition-transform duration-200 ${mobileOpenSection === 'lawreview' ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileOpenSection === 'lawreview' && (
+                <ul id="lawreview-submenu" className="mt-1 ml-2 border-l border-slate-700 pl-3 space-y-1">
+                  <li>
+                    <a
+                      href="/law-review-2026.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-3 py-2 rounded hover:bg-slate-700"
+                    >
+                      2026
+                    </a>
+                  </li>
+                </ul>
+              )}
+            </div>
 
             {/* SAL direct link (Mobile) */}
             <Link to="/sal/llm" className="block mt-1 px-3 py-2 rounded hover:bg-slate-700">

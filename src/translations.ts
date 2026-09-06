@@ -57,6 +57,8 @@ export const translations = {
     ElsaInternational: "ELSA International",
     ElsaAlbania: "ELSA Albania",
     NationalBoard: "National Board",
+    formerOfficers: "Former Officers",
+    lawReview: "Law Review",
     boardTitle: "National Board",
     boardDescription: "Meet the dedicated members of the ELSA Albania National Board.",
 
@@ -186,6 +188,8 @@ export const translations = {
     ElsaInternational: 'Elsa Ndërkombëtare',
     ElsaAlbania: 'Elsa Shqipëri',
     NationalBoard: 'Bordi Kombëtar',
+    formerOfficers: 'Ish-Anëtarët e Bordit',
+    lawReview: 'Law Review',
     History: 'Historia Jonë',
     aboutTeam: 'Ekipi Ynë',
     aboutPartners: 'Partnerët',

@@ -13,6 +13,7 @@ import ProfessionalDevelopment from './components/ProfessionalDevelopment';
 import SeminarsConferences from './components/Seminars';
 import Alumni from './components/Alumni';
 import TeamPage from './components/TeamPage';
+import FormerOfficers from './components/FormerOfficers';
 import SEO from './components/SEO';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -53,6 +54,7 @@ function App() {
                 <Route path="/seminars-conferences" element={<SeminarsConferences />} />
                 <Route path="/alumni" element={<Alumni />} />
                 <Route path="/team" element={<TeamPage />} />
+                <Route path="/former-officers" element={<FormerOfficers />} />
                 <Route path="/sal/more" element={<SALMore />} />
                 <Route path="/sal/llm" element={<SALLLM />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
