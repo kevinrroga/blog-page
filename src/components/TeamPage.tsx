@@ -2,6 +2,7 @@ import { motion, easeOut } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 import { Mail, Linkedin } from 'lucide-react';
+import EmailLink from './EmailLink';
 
 // Import all images from root-level assets folder
 import dinaImage from '@assets/Dina1.png';
@@ -63,7 +64,7 @@ const TeamPage = () => {
           name: "Dina Shapo",
           role: "Director for External Relations",
           photo: dinaImage,
-          email: "president@al.elsa.org",
+          emailUser: "president",
           linkedin: "https://linkedin.com/in/ana-marku"
         },
         {
@@ -71,7 +72,7 @@ const TeamPage = () => {
           name: "Ines Deçolli",
           role: "Director for Expansions",
           photo: inesImage,
-          email: "secgen@al.elsa.org",
+          emailUser: "secgen",
           linkedin: "https://linkedin.com/in/erion-deda"
         }
       ]
@@ -84,7 +85,7 @@ const TeamPage = () => {
           name: "Etual Hoxha",
           role: "Assistan for Human Resources",
           photo: etoileImage,
-          email: "aa@al.elsa.org",
+          emailUser: "aa",
           linkedin: "https://linkedin.com/in/klara-hoxha"
         }
       ]
@@ -97,7 +98,7 @@ const TeamPage = () => {
           name: "Ersiana Korriku",
           role: "Assistant for Academic Activities",
           photo: ersianaImage,
-          email: "aa@al.elsa.org",
+          emailUser: "aa",
           linkedin: "https://linkedin.com/in/klara-hoxha"
         },
         {
@@ -105,7 +106,7 @@ const TeamPage = () => {
           name: "Matilda Lleshi",
           role: "Assistant for Annual Human Rights Campaign",
           photo: matildaImage,
-          email: "step@al.elsa.org",
+          emailUser: "step",
            linkedin: "https://linkedin.com/in/dritan-berisha"
          },
         {
@@ -113,7 +114,7 @@ const TeamPage = () => {
           name: "Lidia Sula",
           role: "Assistant for Law Review and Legal Research Group",
           photo: lidiaImage,
-          email: "step@al.elsa.org",
+          emailUser: "step",
            linkedin: "https://linkedin.com/in/dritan-berisha"
          }
       ]
@@ -126,7 +127,7 @@ const TeamPage = () => {
           name: "Megi Zoto",
           role: "Director for Moot Courts",
           photo: megiImage,
-          email: "aa@al.elsa.org",
+          emailUser: "aa",
           linkedin: "https://linkedin.com/in/klara-hoxha"
         },
          {
@@ -134,7 +135,7 @@ const TeamPage = () => {
            name: "Ema Dako",
            role: "Director for Moot Courts",
            photo: emaImage,
-           email: "step@al.elsa.org",
+           emailUser: "step",
            linkedin: "https://linkedin.com/in/dritan-berisha"
          },
          {
@@ -142,7 +143,7 @@ const TeamPage = () => {
            name: "Marinel Prenga",
            role: "Director for Academic Competitions",
            photo: marinelImage,
-           email: "step@al.elsa.org",
+           emailUser: "step",
            linkedin: "https://linkedin.com/in/dritan-berisha"
          }
       ]
@@ -155,7 +156,7 @@ const TeamPage = () => {
           name: "Ariel Muka",
           role: "Director for Professional Development",
           photo: arielImage,
-          email: "it@al.elsa.org",
+          emailUser: "it",
           linkedin: "https://linkedin.com/in/artan-beqiri"
         },
       ]
@@ -168,7 +169,7 @@ const TeamPage = () => {
           name: "Heldi Kodra",
           role: "Director for Conferences",
           photo: heldiImage,
-          email: "it@al.elsa.org",
+          emailUser: "it",
           linkedin: "https://linkedin.com/in/artan-beqiri"
         },
         {
@@ -176,7 +177,7 @@ const TeamPage = () => {
           name: "Redi Vranici",
           role: "Director Law Schools",
           photo: zImage,
-          email: "it@al.elsa.org",
+          emailUser: "it",
           linkedin: "https://linkedin.com/in/artan-beqiri"
         },
       ]
@@ -283,16 +284,16 @@ const TeamPage = () => {
                       
                       {/* Contact Links */}
                       <div className="mt-6 flex items-center justify-center space-x-6">
-                        {member.email && (
-                          <a 
-                            href={`mailto:${member.email}`}
-                            className="text-slate-600 hover:text-orange-600 transition-colors bg-slate-100 
-                                     hover:bg-orange-100 p-3 rounded-full"
+                        {member.emailUser && (
+                          <EmailLink
+                            user={member.emailUser}
+                            className="text-slate-600 hover:text-orange-600 transition-colors bg-slate-100
+                                     hover:bg-orange-100 p-3 rounded-full cursor-pointer"
                             title={`Email ${member.name}`}
-                            aria-label={`Email ${member.name}`}
+                            ariaLabel={`Email ${member.name}`}
                           >
                             <Mail size={22} />
-                          </a>
+                          </EmailLink>
                         )}
                         
                         {member.linkedin && (

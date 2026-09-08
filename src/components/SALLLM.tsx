@@ -1,5 +1,6 @@
 import PageTransition from './PageTransition';
 import SEO from './SEO';
+import EmailLink from './EmailLink';
 import { useEffect } from 'react';
 import llm1 from '@assets/llm1.png';
 import llm2 from '@assets/llm2.png';
@@ -83,8 +84,8 @@ const SALLLM = () => {
                     </ul>
                     <p className="text-slate-700 mt-2">If diplomas are in a language other than English, provide an English translation (not notarized).</p>
                     <p className="mt-3"><strong>Send applications to:</strong></p>
-                    <p className="text-slate-700"><a className="text-orange-600" href="mailto:admissions@salchicagokent.com">admissions@salchicagokent.com</a></p>
-                    <p className="text-slate-700"><a className="text-orange-600" href="mailto:admission@chicagokentlaw.ge">admission@chicagokentlaw.ge</a></p>
+                    <p className="text-slate-700"><EmailLink user="admissions" domain="salchicagokent.com" className="text-orange-600 cursor-pointer" /></p>
+                    <p className="text-slate-700"><EmailLink user="admission" domain="chicagokentlaw.ge" className="text-orange-600 cursor-pointer" /></p>
                   </div>
                 </div>
               </article>
@@ -172,25 +173,27 @@ const SALLLM = () => {
                 <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-slate-50 p-4 rounded">
                     <h4 className="font-semibold">SAL Admissions</h4>
-                    <p className="text-slate-700 mt-2"><a className="text-orange-600" href="mailto:admissions@salchicagokent.com">admissions@salchicagokent.com</a></p>
+                    <p className="text-slate-700 mt-2"><EmailLink user="admissions" domain="salchicagokent.com" className="text-orange-600 cursor-pointer" /></p>
                   </div>
                   <div className="bg-slate-50 p-4 rounded">
                     <h4 className="font-semibold">Chicago-Kent Admissions</h4>
-                    <p className="text-slate-700 mt-2"><a className="text-orange-600" href="mailto:admission@chicagokentlaw.ge">admission@chicagokentlaw.ge</a></p>
+                    <p className="text-slate-700 mt-2"><EmailLink user="admission" domain="chicagokentlaw.ge" className="text-orange-600 cursor-pointer" /></p>
                   </div>
                   <div className="bg-slate-50 p-4 rounded">
                     <h4 className="font-semibold">ELSA Albania</h4>
-                    <p className="text-slate-700 mt-2"><a className="text-orange-600" href="mailto:president@al.elsa.org">president@al.elsa.org</a></p>
+                    <p className="text-slate-700 mt-2"><EmailLink user="president" className="text-orange-600 cursor-pointer" /></p>
                   </div>
                 </div>
 
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="mailto:admissions@salchicagokent.com"
-                    className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                  <EmailLink
+                    user="admissions"
+                    domain="salchicagokent.com"
+                    ariaLabel="Apply via email"
+                    className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors cursor-pointer"
                   >
                     Apply via Email
-                  </a>
+                  </EmailLink>
                   <a
                     href="https://salchicagokent.com/school/albania/"
                     target="_blank"

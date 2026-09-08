@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react'; // Add this import
 import PageTransition from './PageTransition';
 import AnimatedSection from './AnimatedSection';
+import EmailLink from './EmailLink';
 import mpImage from '../../assets/mp.jpg';
 import mgImage from '../../assets/mg.jpg';
 import dinaImage from '../../assets/Dina1.png';
@@ -17,7 +18,7 @@ const boardMembers = [
     image: mpImage,
     bio: "Leading ELSA Albania with passion and dedication.",
     isMain: true,
-    email: "president@al.elsa.org"
+    emailUser: "president"
   },
   {
     name: "Dina Shapo",
@@ -25,7 +26,7 @@ const boardMembers = [
     image: dinaImage,
     bio: "Coordinating academic activities and international relations.",
     isMain: true,
-    email: "secgen@al.elsa.org"
+    emailUser: "secgen"
   },
   {
     name: "Amara Alia",
@@ -33,7 +34,7 @@ const boardMembers = [
     image: null,
     bio: "",
     isMain: false,
-    email: "marketing@al.elsa.org"
+    emailUser: "marketing"
   },
   {
     name: "Martina Gllavaj",
@@ -41,7 +42,7 @@ const boardMembers = [
     image: mgImage,
     bio: "",
     isMain: false,
-    email: "academicactivities@al.elsa.org"
+    emailUser: "academicactivities"
   },
   {
     name: "Ema Dako",
@@ -49,7 +50,7 @@ const boardMembers = [
     image: null,
     bio: "",
     isMain: false,
-    email: "competitions@al.elsa.org"
+    emailUser: "competitions"
   },
   {
     name: "Ersiana Korriku",
@@ -57,7 +58,7 @@ const boardMembers = [
     image: null,
     bio: "",
     isMain: false,
-    email: "professionaldevelopment@al.elsa.org"
+    emailUser: "professionaldevelopment"
   },
   {
     name: "Redi Vraniçi",
@@ -65,7 +66,7 @@ const boardMembers = [
     image: null,
     bio: "",
     isMain: false,
-    email: "seminarsconferences@al.elsa.org"
+    emailUser: "seminarsconferences"
   }
 ];
 
@@ -125,20 +126,19 @@ const BoardPage = () => {
                     </p>
 
                     {/* Email Display and Button */}
-                    {member.email && (
+                    {member.emailUser && (
                       <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-2">
-                        <span className="text-slate-300 text-sm break-all">
-                          {member.email}
-                        </span>
-                        <a
-                          href={`mailto:${member.email}`}
+                        <EmailLink
+                          user={member.emailUser}
+                          showText
+                          textClassName="text-slate-300 text-sm break-all"
                           className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600
-                                   text-white p-2 rounded-full transition-colors flex-shrink-0"
+                                   text-white p-2 rounded-full transition-colors flex-shrink-0 cursor-pointer"
                           title={`Email ${member.name}`}
-                          aria-label={`Email ${member.name}`}
+                          ariaLabel={`Email ${member.name}`}
                         >
                           <Mail size={18} />
-                        </a>
+                        </EmailLink>
                       </div>
                     )}
                   </div>
@@ -174,20 +174,19 @@ const BoardPage = () => {
                     </p>
 
                     {/* Email Display and Button */}
-                    {member.email && (
+                    {member.emailUser && (
                       <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-2">
-                        <span className="text-slate-300 text-sm break-all">
-                          {member.email}
-                        </span>
-                        <a
-                          href={`mailto:${member.email}`}
+                        <EmailLink
+                          user={member.emailUser}
+                          showText
+                          textClassName="text-slate-300 text-sm break-all"
                           className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600
-                                   text-white p-2 rounded-full transition-colors flex-shrink-0"
+                                   text-white p-2 rounded-full transition-colors flex-shrink-0 cursor-pointer"
                           title={`Email ${member.name}`}
-                          aria-label={`Email ${member.name}`}
+                          ariaLabel={`Email ${member.name}`}
                         >
                           <Mail size={18} />
-                        </a>
+                        </EmailLink>
                       </div>
                     )}
                   </div>
@@ -223,20 +222,19 @@ const BoardPage = () => {
                     </p>
 
                     {/* Email Display and Button */}
-                    {member.email && (
+                    {member.emailUser && (
                       <div className="flex items-center justify-center space-x-3">
-                        <span className="text-slate-300 text-sm truncate max-w-[150px]">
-                          {member.email}
-                        </span>
-                        <a
-                          href={`mailto:${member.email}`}
+                        <EmailLink
+                          user={member.emailUser}
+                          showText
+                          textClassName="text-slate-300 text-sm truncate max-w-[150px]"
                           className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600
-                                   text-white p-2 rounded-full transition-colors flex-shrink-0"
+                                   text-white p-2 rounded-full transition-colors flex-shrink-0 cursor-pointer"
                           title={`Email ${member.name}`}
-                          aria-label={`Email ${member.name}`}
+                          ariaLabel={`Email ${member.name}`}
                         >
                           <Mail size={18} />
-                        </a>
+                        </EmailLink>
                       </div>
                     )}
                   </div>

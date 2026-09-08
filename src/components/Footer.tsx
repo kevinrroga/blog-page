@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 import elsaLogo from '../../assets/elsa-logo-white.png';
+import EmailLink from './EmailLink';
+import { composeEmail } from '../lib/email';
 
 const Footer = () => {
   const { language } = useLanguage();
@@ -102,13 +104,14 @@ const Footer = () => {
               </a>
               
               <div className="flex items-center space-x-3">
-                <a 
-                href="mailto:president@al.elsa.org"
-                className="flex items-center justify-center space-x-2 text-sm text-slate-300 hover:text-orange-400 transition-colors group"
-              >
-                <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                <div>{t.email}</div>
-                </a>
+                <EmailLink
+                  user={t.emailUser}
+                  ariaLabel={composeEmail(t.emailUser)}
+                  className="flex items-center justify-center space-x-2 text-sm text-slate-300 hover:text-orange-400 transition-colors group cursor-pointer"
+                >
+                  <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                  <div>{composeEmail(t.emailUser)}</div>
+                </EmailLink>
               </div>
             </div>
           </address>
@@ -248,7 +251,6 @@ const Footer = () => {
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": t.phone,
-              "email": "president@al.elsa.org",
               "contactType": "Customer Service",
               "availableLanguage": ["Albanian", "English"]
             },
