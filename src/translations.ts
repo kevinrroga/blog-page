@@ -33,7 +33,7 @@ export const translations = {
     street: 'Fakulteti i Drejtësisë, Universiteti i Tiranës Rruga "Milto Tutulani"',
     city: '1001 Tirana',
     phone: '+355 69 314 3623',
-    email: 'president@al.elsa.org',
+    emailUser: 'president',
     university: 'University of Tirana, Faculty of Law',
 
     // Gallery Stats
@@ -166,7 +166,7 @@ export const translations = {
     street: 'Fakulteti i Drejtësisë, Universiteti i Tiranës Rruga "Milto Tutulani"',
     city: '1001 Tiranë',
     phone: '+355 69 314 3623',
-    email: 'president@al.elsa.org',
+    emailUser: 'president',
     marketing: "Marketing",
 
     // Gallery Stats
